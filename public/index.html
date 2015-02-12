@@ -6,5 +6,40 @@
 </head>
 <body>
     <p>Test page <b>public\index.html</b></p>
+
+
+<script type="text/javascript">
+    var x = 5, y="home", w=9, z;  //создание нескольких переменных через запятую (пустая зет)
+    x++;  //увеличение численного значения на 1, для уменьшения два минуса --
+    w *= 3; // += равносильно w = w + 7;      -= равносильно w = w - 7;      *= равносильно w = w * 7;       /= равносильно w = w / 7;
+    document.write(w + '<br>');
+    var nameA = "Alexander", lastname = "Melnichuk";
+
+    document.write(nameA + '<br>' + lastname + '<br>');
+
+    var x33 = nameA + x;
+    document.write(x33+ '<br><br>');
+
+
+var daysCount = 365, planet = "Земля", populationCount = "7 млрд.", sun = "Солнца";
+document.write(
+    "Мы живем на планете " +  planet + ", она делает один оборот вокруг " + sun + " за " + daysCount + " дней.<br>" +
+    "Население нашей планеты составляет примерно " + populationCount + " человек."
+    );
+
+    document.write('<br><br>');
+
+
+    document.write('массивы<br>');
+var myArray = [4, "kiev", 38, 'lvov'], num = 3;    //создание массива из четырех индексов, отсчет идет с нуля 0 1 2 3, скобки квадратные
+    document.write(myArray[num] + " city ");       //вывод массива где вместо индекса переменная num со значением 3
+
+var myArray2 = new Array (4, 'kiev', 38, 'lvov');  //альтернативное создание массива c используем зарезервированной команды new Array, скобки круглые
+    document.write(myArray2[1] + " city");
+
+var myArrayL = myArray.length;
+    document.write()
+</script>
+
 </body>
 </html>
