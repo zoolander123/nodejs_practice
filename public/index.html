@@ -5,23 +5,43 @@
     <title>js + jQuery</title>
 </head>
 <body>
-    <p>Test page <b>public\index.html</b></p>
-
 
 <script type="text/javascript">
-    var x = 5, y="home", w=9, z;  //создание нескольких переменных через запятую (пустая зет)
-    x++;  //увеличение численного значения на 1, для уменьшения два минуса --
-    w *= 3; // += равносильно w = w + 7;      -= равносильно w = w - 7;      *= равносильно w = w * 7;       /= равносильно w = w / 7;
-    document.write(w + '<br>');
-    var nameA = "Alexander", lastname = "Melnichuk";
+    document.write('Создание переменных через запятую:<br> ' +
+    'var x=5, y="home", z;<br> где х=5 - <b>number</b>, y="home" - <b>string</b>, z - <b>undefined</b>, также есть <b>null</b> (значение неизвестно) ' +
+    'и  <b>boolean</b> (true or fasle) - это 5 "примитивных" типов данных. 6 тип данных это объекты objects о них позже<br><br>');
 
-    document.write(nameA + '<br>' + lastname + '<br>');
+    var x=5, y="home", w=9, z;  // Создание переменных через запятую
 
-    var x33 = nameA + x;
-    document.write(x33+ '<br><br>');
+    document.write('+ - * / = , % <b>это Операторы</b>, они могут быть Унарными и Бинарными. То к чему приминяются операторы называют <b>Операндами</b>. Например ' +
+    'x + y здесь два операнда икс и игрек и один оператор это +. <br>УНАРНЫМИ называют операторы когда они идут с одной переменной. Например у нас есть ' +
+    'переменные в форме стринг var a="3", b="4"; <br>Если использовать Бинарный плюс то получим alert(a + b) //34. ' +
+    'Если использовать Унарные плюсы то получим alert(+a + +b) //7<br>' +
+    'БИНАРНЫМИ - когда оператор используется с двумя операндами x+y. Например можно использовать для объединения строк " " + " ". <br> ' +
+    'Если один из операндов является строкой результат тоже будет string <br><br> ' +
+    'Оператор присваивания = идет <b>справа налево</b>. Например:<br> var a = 1, b = 2; <br>var c = 3 - (a = b + 1); <br> alert(a); // 3 <br> ' +
+    ' alert(c); // 0   <br><br>  ');
 
 
-var daysCount = 365, planet = "Земля", populationCount = "7 млрд.", sun = "Солнца";
+    document.write('Оператор <b>ИНКРЕМЕНТ</b> ++ увеличивает на 1. можно применить только с переменной например x++ более короткая запись для x=x+1<br>');
+    document.write('Оператор <b>ДИКРЕМЕНТ</b> -- увеличивает на 1. можно применить только с переменной например y-- более короткая запись для y=y-1<br>');
+    document.write('Инкременты и дикременты могут быть префиксными ++x и постпрефиксными x++. <br>Префексные ++x увеличивают значение переменной  ' +
+    'и сразу возвращают НОВЫЙ результат. <br>Когда как Постпрефиксные x++ увеличивают значение и возвращают СТАРЫЙ результат. Например: <br><br>' +
+    'var a = 1, b = 1, c, d;<br>' +
+    'c = ++a; alert(c); // 2<br>' +
+    'd = b++; alert(d); // 1<br>' +
+    'c = (2+ ++a); alert(c); // 5<br>' +
+    'd = (2+ b++); alert(d); // 4<br>' +
+    'alert(a); // 3<br>' +
+    'alert(b); // 3<br>' +
+
+    '<br><br>');
+
+
+    w *= 3; // += равносильно w = w + 3;      -= равносильно w = w - 3;      *= равносильно w = w * 3;       /= равносильно w = w / 3;
+
+
+    var daysCount = 365, planet = "Земля", populationCount = "7 млрд.", sun = "Солнца";
 document.write(
     "Мы живем на планете " +  planet + ", она делает один оборот вокруг " + sun + " за " + daysCount + " дней.<br>" +
     "Население нашей планеты составляет примерно " + populationCount + " человек."
@@ -31,14 +51,65 @@ document.write(
 
 
     document.write('массивы<br>');
-var myArray = [4, "kiev", 38, 'lvov'], num = 3;    //создание массива из четырех индексов, отсчет идет с нуля 0 1 2 3, скобки квадратные
+var myArray = [4, "Kiev", 38, 'Lvov'], num = 3;    //создание массива из четырех индексов, отсчет идет с нуля 0 1 2 3, скобки квадратные
     document.write(myArray[num] + " city ");       //вывод массива где вместо индекса переменная num со значением 3
 
 var myArray2 = new Array (4, 'kiev', 38, 'lvov');  //альтернативное создание массива c используем зарезервированной команды new Array, скобки круглые
     document.write(myArray2[1] + " city");
 
+    document.write('<br><br>');
+
 var myArrayL = myArray.length;
-    document.write()
+    document.write(myArray);
+    document.write("<br>Длинна масива .length - " + myArrayL + ' индекса'); // .length свойство считывающие колличество индексов
+    myArray.push ("odessa");         // добавление нового индекса в конец массива
+    myArray.unshift ("kharkov");     // добавление нового индекса в начало массива
+
+    document.write('<br><br>');
+
+    document.write(myArray);
+    var myArrayL = myArray.length;
+    document.write("<br>Длинна масива .length - " + myArrayL + ' индекса. Добавили методом <b style="color:red;">.push .unshift </b> в конец и начало массива');
+    myArray.pop ();         // удаляем индекс из конец массива
+    myArray.shift ();       // удаляем индекс из начала массива
+
+    document.write('<br><br>');
+
+    document.write(myArray);
+    var myArrayL = myArray.length;
+    document.write("<br>Длинна масива .length - " + myArrayL + ' индекса. Удалили индексы методом <b style="color:red;">.pop .shift</b> из конец и начала массива');
+
+    document.write('<br><br>');
+    document.write("Выводим последний индекс массива при помощи свойства <b style='color:purple;'>.length</b> -1 в качестве индекса " + myArray[myArrayL - 1]);   // массив[массив.length -1]
+
+    document.write('<br><br>');
+
+    document.write('Использование метода <b style="color:red;">.splice</b><br>');
+    myArray.splice(1,0, "Paris");  //сдвигает вправо индекс 1 (ничего не удаляет потому что 0) и вставляет новый индекс
+    document.write(myArray + "<br>");
+    document.write('');
+    myArray.splice(3,1);  //сдвигает вправо индекс 3 и удаляет один индекс. полулучается что удаляет самого себя - индекс номер 3
+    document.write(myArray + "<br>");
+    myArray.splice(0,1, "London", "Berlin");  // сдвигает вправо индекс 0 и удаляет один индекс. и в тоже место вставляет 2 новых индекса
+    document.write(myArray + "<br>");
+
+    numArray = [50, 60, 70, 80, 90];
+    document.write("<br>" + myArray[0] + " " + numArray[0] + ", млн. человек.<br>" +
+                            myArray[1] + " " + numArray[1] + ", млн. человек.<br>" +
+                            myArray[2] + " " + numArray[2] + ", млн. человек.<br><br>");
+
+   frutsArr = ['orange','banana','pear'];
+   document.write(frutsArr + "<br>");
+
+   var testArr = frutsArr.splice(1,2, 'apple','pineapple'); //Метод splice изменяет arrayObj, удаляя указанное количество элементов, начиная с позиции start,
+                                                            // и вставляя новые элементы. Удаленные элементы возвращаются как новый объект Array.
+   document.write(frutsArr + "<br>");
+
+   document.write(testArr +'<br>');
+
+//   alert('Alert ("Любой текст");');
+
+
 </script>
 
 </body>
