@@ -42,8 +42,8 @@
     "<b>null и undefined</b> равны == друг другу и не равны чему бы то ни было ещё. При преобразовании в число null становится 0, а undefined становится NaN.<br>" +
     "alert(null > 0); // false,   потому что  при преобразовании в число null становится 0, а 0 не можеть быть больше 0<br>" +
     "alert(null == 0); // false,  потому что null равно == только undefined<br>" +
-    "alert(null >= 0); // true,   потому что  при преобразовании в число null становится 0, а 0 >= 0  <br><br>");
-
+    "alert(null >= 0); // true,   потому что  при преобразовании в число null становится 0, а 0 >= 0 <br> ");
+    document.write ('Логический тип данных это <b>true - false</b><br><br>');
     //     != не равно,       == равно
 
     // += равносильно w = w + 3;      -= равносильно w = w - 3;      *= равносильно w = w * 3;       /= равносильно w = w / 3;   !=
@@ -56,6 +56,107 @@
     "Результатом будет true при нажатии OK и false - при CANCEL(Esc).<br>" +
     "<br><br>");
 
+    document.write ("Оператор <b>IF ELSE</b><br>");
+
+    document.write ("Оператор <b>if</b> (...) вычисляет и преобразует выражение в скобках к логическому типу. (true or false). " +
+    "Необязательный блок else («иначе») выполняется, если условие неверно.<br>" +
+    "Иногда нужно в зависимости от условия присвоить переменную. Оператор вопросительный знак '?' позволяет это делать: access = (age > 14) ? true : false<br><br>" +
+
+    " var testIF1 = prompt('Введите число');   <br>" +
+    "if (testIF1 > 0) {                        <br>" +
+    "     alert('Значение больше нуля');       <br>" +
+    "} else if (testIF1 < 0) {                 <br>" +
+    "    alert('Значение меньше нуля');        <br>" +
+    "} else {                                  <br>" +
+    "    alert('Значение равно нулю');         <br>" +
+    "}                                         <br><br>" +
+
+
+    "var testIF4 = prompt('Enter your login', ' ');             <br>" +
+    "(testIF4 =='Bob')? alert('Hi') :                           <br>" +
+    "(testIF4 == 'Headmaster')? alert('Nice to meet you') :     <br>" +
+    "(testIF4 == '')? alert('login absent') : alert('WTF ??');  <br>" +
+    "");
+
+
+/*    var testIF = prompt('Каково «официальное» название JavaScript?', '');
+    if (testIF == 'EcmaScript') {
+        alert ('Верно!');
+    }   else {
+        alert ('Не знаете? «EcmaScript»!');
+             }
+
+
+                        var testIF1 = prompt('Введите число');
+                        if (testIF1 > 0) {
+                            alert('Значение больше нуля');
+                        } else if (testIF1 < 0) {
+                            alert('Значение меньше нуля');
+                        } else {
+                            alert('Значение равно нулю');
+                        }
+
+
+    var testIF2 = prompt('Enter your login', '');
+    if (testIF2 == "Admin") {
+            var ifAdmin = prompt('Enter your password', '');
+            if (ifAdmin == 'Dark Lord') {
+            alert('Welcome, Master!!!');
+            } else if (ifAdmin == null){
+            alert('Abort');
+            } else {
+            alert('Wrong password');
+            }
+    } else if (testIF2 == null) {
+    alert('Abort');
+    } else {
+    alert('I don’t know u');
+    }
+
+
+                    var a=1, b=6;
+                    var testIF3 = (a + b < 4)? 'correct' : 'incorrect';
+                    alert (testIF3);
+
+
+
+    var testIF4 = (login =='Bob')? 'Hi' : (login == 'Headmaster')? 'Nice to meet you' : (login == '')? 'login absent' : '';
+
+    var testIF4 = prompt('Enter your login', '');
+    (testIF4 =='Bob')? alert('Hi') :
+    (testIF4 == 'Headmaster')? alert('Nice to meet you') :
+    (testIF4 == '')? alert('login absent') : alert('WTF ??');
+
+
+
+
+                    var testIF5 = prompt('Enter number from 1 to 10','');
+                    if (testIF5 < 5) {
+                            if (testIF5 > 0) {
+                              alert ('Number is smaller then 5');
+                            } else if (testIF5 == 0) {                 // также цепляет пустой рядок с ОК батон
+                              alert('Don’t use 0');
+                            } else if (testIF5 < 0) {
+                              alert('Enter positive number');
+                            } else if (testIF5 == null) {
+                              alert('null');
+                            } else ('sdsdsdsds');
+                    } else if (testIF5 > 5) {
+                      alert('Number is bigger then 5');
+                    } else if (testIF5 == 5) {
+                      alert('Number is equal to 5');
+                    } else alert ('Wrong type of object');
+
+
+ */
+
+  
+
+
+
+
+
+
 
 
 
@@ -64,6 +165,9 @@ document.write(
     "<br><br>Мы живем на планете " +  planet + ", она делает один оборот вокруг " + sun + " за " + daysCount + " дней.<br>" +
     "Население нашей планеты составляет примерно " + populationCount + " человек.<br><br>"
     );
+
+
+
 
 
     document.write('массивы<br>');
