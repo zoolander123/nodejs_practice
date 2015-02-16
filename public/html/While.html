@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>js + jQuery</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+
+document.write('Циклы <b style="color: red">DO, WHILE, FOR</b><br>');
+    document.write("Для многократного повторения одного участка кода - предусмотрены циклы. Повторение цикла называется «итерация».<br><br>" +
+
+    "Цикл WHILE                                                                 <br>"+
+    "var i = 3                                                                  <br>"+
+    "while (i) { // при i=0 значение в скобках будет false и цикл остановится   <br>"+
+    "    alert(i);                                                              <br>"+
+    "    i--;  }                                                                <br><br>" +
+
+    "Цикл DO WHILE      <br>"+
+    "var i = 0;         <br>"+
+    "do {               <br>"+
+    "alert(i);          <br>"+
+    "i++;               <br>"+
+    "} while (i < 3);   <br><br>" +
+
+    "Цикл FOR                       <br>"+
+    "for (начало; условие; шаг) {   <br>"+
+    "// ... тело цикла ...          <br>"+
+    "}                              <br><br>" +
+
+    "var i;                         <br>"+
+    "for (i=0; i<3; i++) {          <br>"+
+    "alert(i);                      <br>"+
+    "}                              <br>");
+
+    document.write('Начало i=0 выполняется при заходе в цикл. Условие i<3 проверяется перед каждой итерацией. <br>' +
+    'Шаг i++ выполняется после каждой итерации, но перед проверкой условия. <b>Любая часть for может быть пропущена,</b> ' +
+    'но обязательно должны присутствовать ; для разограничений (; i<3;)</b><br><br><br>');
+
+
+/*
+    var testDoWhile;
+    do {
+        testDoWhile=prompt("Enter Number bigger then 100",'');
+    } while(testDoWhile < 100 && testDoWhile != null);
+
+
+    var testWhile = 0;
+    while (testWhile < 100 && testWhile != null) {
+        testWhile=prompt("Enter Number bigger then 100",'');
+    }
+
+
+    for (var testFor = 0; testFor < 100 && testFor != null;){
+     testFor = prompt("num","");
+    }
+*/
+
+</script>
+
+</body>
+</html>
