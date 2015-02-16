@@ -8,7 +8,7 @@
 
 <script type="text/javascript">
 
-    document.write ("Оператор <b>IF ELSE</b><br>");
+    document.write ("Оператор <b style='color:red;'>IF ELSE</b><br>");
 
     document.write ("Оператор <b>if</b> (...) вычисляет и преобразует выражение в скобках к логическому типу. (true or false). " +
     "Необязательный блок else («иначе») выполняется, если условие неверно.<br>" +
@@ -28,77 +28,156 @@
     "(testIF4 =='Bob')? alert('Hi') :                           <br>" +
     "(testIF4 == 'Headmaster')? alert('Nice to meet you') :     <br>" +
     "(testIF4 == '')? alert('login absent') : alert('WTF ??');  <br>" +
-    "");
+    "<br><br>");
 
 
-/*    var testIF = prompt('Каково «официальное» название JavaScript?', '');
-    if (testIF == 'EcmaScript') {
-    alert ('Верно!');
-    } else {
-    alert ('Не знаете? «EcmaScript»!');
-    }
+    /*   var testIF = prompt('Каково «официальное» название JavaScript?', '');
+     if (testIF == 'EcmaScript') {
+     alert ('Верно!');
+     }   else {
+     alert ('Не знаете? «EcmaScript»!');
+     }
 
 
-                                            var testIF1 = prompt('Введите число');
-                                            if (testIF1 > 0) {
-                                                alert('Значение больше нуля');
-                                            } else if (testIF1 < 0) {
-                                                alert('Значение меньше нуля');
-                                            } else {
-                                                alert('Значение равно нулю');
-                                            }
+     var testIF1 = prompt('Введите число');
+     if (testIF1 > 0) {
+     alert('Значение больше нуля');
+     } else if (testIF1 < 0) {
+     alert('Значение меньше нуля');
+     } else {
+     alert('Значение равно нулю');
+     }
 
 
-    var testIF2 = prompt('Enter your login', '');
-    if (testIF2 == "Admin") {
-            var ifAdmin = prompt('Enter your password', '');
-            if (ifAdmin == 'Dark Lord') {
-            alert('Welcome, Master!!!');
-            } else if (ifAdmin == null){
-            alert('Abort');
-            } else {
-            alert('Wrong password');
-            }
-    } else if (testIF2 == null) {
-    alert('Abort');
-    } else {
-    alert('I don’t know u');
-    }
+     var testIF2 = prompt('Enter your login', '');
+     if (testIF2 == "Admin") {
+     var ifAdmin = prompt('Enter your password', '');
+     if (ifAdmin == 'Dark Lord') {
+     alert('Welcome, Master!!!');
+     } else if (ifAdmin == null){
+     alert('Abort');
+     } else {
+     alert('Wrong password');
+     }
+     } else if (testIF2 == null) {
+     alert('Abort');
+     } else {
+     alert('I don’t know u');
+     }
 
 
-                                        var a=1, b=6;
-                                        var testIF3 = (a + b < 4)? 'correct' : 'incorrect';
-                                        alert (testIF3);
-
-
-
-    var testIF4 = (login =='Bob')? 'Hi' : (login == 'Headmaster')? 'Nice to meet you' : (login == '')? 'login absent' : '';
-
-    var testIF4 = prompt('Enter your login', '');
-    (testIF4 =='Bob')? alert('Hi') :
-    (testIF4 == 'Headmaster')? alert('Nice to meet you') :
-    (testIF4 == '')? alert('login absent') : alert('WTF ??');
+     var a=1, b=6;
+     var testIF3 = (a + b < 4)? 'correct' : 'incorrect';
+     alert (testIF3);
 
 
 
+     var testIF4 = (login =='Bob')? 'Hi' : (login == 'Headmaster')? 'Nice to meet you' : (login == '')? 'login absent' : '';
 
-                                var testIF5 = prompt('Enter number from 1 to 10','');
-                                if (testIF5 < 5) {
-                                        if (testIF5 > 0) {
-                                          alert ('Number is smaller then 5');
-                                        } else if (testIF5 == 0) {                 // также цепляет пустой рядок с ОК батон
-                                          alert('Don’t use 0');
-                                        } else if (testIF5 < 0) {
-                                          alert('Enter positive number');
-                                        } else if (testIF5 == null) {
-                                          alert('null');
-                                        } else ('sdsdsdsds');
-                                } else if (testIF5 > 5) {
-                                  alert('Number is bigger then 5');
-                                } else if (testIF5 == 5) {
-                                  alert('Number is equal to 5');
-                                } else alert ('Wrong type of object');
- */
+     var testIF4 = prompt('Enter your login', '');
+     (testIF4 =='Bob')? alert('Hi') :
+     (testIF4 == 'Headmaster')? alert('Nice to meet you') :
+     (testIF4 == '')? alert('login absent') : alert('WTF ??');
+
+
+
+
+     var testIF5 = prompt('Enter number from 1 to 10','');
+     if (testIF5 < 5) {
+     if (testIF5 > 0) {
+     alert ('Number is smaller then 5');
+     } else if (testIF5 == 0) {                 // также цепляет пустой рядок с ОК батон
+     alert('Don’t use 0');
+     } else if (testIF5 < 0) {
+     alert('Enter positive number');
+     } else if (testIF5 == null) {
+     alert('null');
+     } else ('sdsdsdsds');
+     } else if (testIF5 > 5) {
+     alert('Number is bigger then 5');
+     } else if (testIF5 == 5) {
+     alert('Number is equal to 5');
+     } else alert ('Wrong type of object');
+     */
+
+
+    document.write ("Операторы <b style='color:red;'> || (ИЛИ), && (И) и ! (НЕ). </b><br>" +
+    "Они называются «логическими», но в JavaScript могут применяться к значениям любого типа и возвращают также значения любого типа.<br><br>" +
+    "Логическое || (ИЛИ) в классическом программировании работает следующим образом: «если хотя бы один из аргументов true, то возвращает true, иначе — false».<br>" +
+    "Если первый аргумент — true, то результат заведомо будет true (хотя бы одно из значений — true), и остальные значения игнорируются.<br>" +
+    "Оператор <b>|| (ИЛИ) возвращает то значение, на котором остановились</b> вычисления.<br><br>" +
+
+    "var x; <br>" +
+    "true || (x = 1);   // просто вычислим ИЛИ, без if <br>" +
+    "alert(x); // undefined, x не присвоен <br><br>" +
+
+    "var undef; // переменная не присвоена, т.е. равна undefined                    <br>" +
+    "var zero = 0;                                                                  <br>" +
+    "var emptyStr = ' ';                                                            <br>" +
+    "var msg = 'Привет!';                                                           <br>" +
+    "var result = undef || zero || emptyStr || msg || 0;                            <br>" +
+    "alert(result) // выведет 'Привет!' - первое значение, которое является true    <br><br>");
+
+    document.write ("В классическом программировании && (И) возвращает true, если оба аргумента истинны, а иначе — false<br>" +
+    "<b> Если левый аргумент — false, оператор && (И) возвращает его и заканчивает вычисления</b> . Иначе — вычисляет и возвращает правый аргумент. <br> <br>" +
+    "alert( true  && true ); // true    <br>" +
+    "alert( false && true ); // false   <br>" +
+    "alert( true  && false); // false   <br>" +
+    "alert( false && false); // false   <br><br>" +
+
+    "if ( 1 && 0 ) { // вычислится как true && false    <br>" +
+    "alert('не сработает, т.к. условие ложно');         <br>" +
+    " }                                                 <br><br>" +
+
+
+    "// Первый аргумент - true, Поэтому возвращается второй аргумент                <br>" +
+    "alert(1 && 0);  // 0                                                           <br>" +
+    "alert(1 && 5);  // 5                                                           <br>" +
+    "// Первый аргумент - false, Он и возвращается, а второй аргумент игнорируется  <br>" +
+    "alert(null && 5);  // null                                                     <br>" +
+    "alert(0 && 'не важно'); // 0                                                  <br><br>");
+
+
+    document.write ("<b>Оператор ! (НЕ) сначала приводит аргумент к логическому типу true/false. Затем возвращает противоположное значение</b>.<br>" +
+    "alert( !true ) // false<br>" +
+    "alert( !0 )  // true);<br><br>" +
+
+    "В частности, двойное НЕ используются для преобразования значений к логическому типу:<br>" +
+    "alert( !!'строка' )  // true <br>" +
+    "alert( !!null ) // false <br>");
+
+    /*
+     var testIF6 = prompt('Введите число',"");
+     if (testIF6 >= 14 && testIF6 <= 90) {
+     alert('Переменная в диапазоне 14 и 90');
+     } else if (testIF6 < 14) {
+     if (testIF6 >= 1) {
+     alert('Переменная меньше 14');
+     } else if (testIF6 == 0) {                 // также цепляет пустой рядок с ОК батон
+     alert('Don’t use 0');
+     } else if (testIF6 < 0) {
+     alert('Enter positive number');
+     } else if (testIF6 == null) {
+     alert('null');
+     } else ('sdsdsdsds');
+     } else if (testIF6 > 90) {
+     alert('Переменная больше 90');
+     } else {alert('Переменная не задана');}
+
+
+     var testIF7 = prompt('Введите число',"");
+     if ( !(testIF7 >= 14 && testIF7 <= 90) ) {
+     alert('переменная не в диапазоне 14-90');
+     } else {alert('Переменная в диапазоне');}
+
+
+     var testIF8 = prompt('Введите число',"");
+     if (testIF8 <= 14 || testIF8 >= 90) {
+     alert('переменная не в диапазоне 14-90');
+     }
+     */
+
+
 
 </script>
 
