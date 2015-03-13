@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>array push number 3</title>
+</head>
+<body>
+<script type="text/javascript">
+
+
+    var numbers = [];
+    var strings = [];
+
+    do {
+        var inp = prompt("Enter the number:", "");
+        if ( !(isNaN(inp)) ) {
+            numbers.push(inp)
+        }
+
+        else if ( isNaN(inp) ) {
+            strings.push(inp)
+        }
+
+    } while(inp != null)
+
+
+    alert(numbers);
+    alert(strings);
+
+</script>
+
+<pre>
+
+ Программа запрашивает ввести что угодно. Если вводишь число - записывает в один массив, если слово(строку) - в другой.
+ При нажатии Cancel ввод прекращается и на экран выводиться количество введенных чисел и слов.
+
+ var numbers = [];
+ var strings = [];
+
+ do {
+    var inp = prompt("Enter the number:", "");
+    if ( !(isNaN(inp)) ) {
+        numbers.push(inp)
+    }
+
+    else if ( isNaN(inp) ) {
+        strings.push(inp)
+    }
+
+ } while(inp != null)
+
+ alert(numbers);
+ alert(strings);
+
+
+</pre>
+
+</body>
+</html>

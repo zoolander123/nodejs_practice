@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>function 3</title>
+</head>
+<body>
+<script type="text/javascript">
+
+
+
+    function showMessage(name, text) {
+        name = '**' + name + '**';                          // перезаписываем локальную переменную name
+        alert(name + '\n\n' + text +" eeeee");              // сама фунцкция выполняет первый алерт с локальным нейм
+    }
+
+    var hello = 'Как дела!',
+        name = 'Маша';
+
+    showMessage(name, hello);                               // значения будут скопированы в параметры функции
+    alert(name);                                            // выполняется второй алерт с глобальным нейм
+
+
+</script>
+
+<pre>
+                function showMessage(name, text) {
+                    name = '**' + name + '**';                          // перезаписываем локальную переменную name
+                    alert(name + '\n\n' + text +" eeeee");              // прописан первый алерт
+                }
+
+                var hello = 'Как дела!',
+                    name = 'Маша';
+
+                showMessage(name, hello);                               // сама фунцкция выполняет первый алерт с локальным нейм
+                alert(name);                                            // выполняется второй алерт с глобальным нейм
+
+
+
+</pre>
+
+</body>
+</html>

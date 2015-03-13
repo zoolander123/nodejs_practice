@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>function 5</title>
+</head>
+<body>
+<script type="text/javascript">
+
+
+    var age = prompt("возраст","");
+
+        function checkAge(age) {
+            return (age > 18) || confirm ('R U SURE?');
+        }
+
+    checkAge(age);
+
+
+</script>
+
+<pre>
+
+
+        var age = prompt("возраст","");
+
+        function checkAge(age) {
+            return (age > 18) || confirm ('R U SURE?');
+        }
+
+        checkAge(age);
+
+
+
+                                function checkAge(age) {        //тотже вариант с if else
+                                    if (age > 18) {
+                                        return true;
+                                    } else {
+                                        return confirm('R U SURE?');
+                                    }
+
+                                }
+
+
+
+    function checkAge(age) {                                    // //тотже вариант с ? :
+        return (age > 18) ?  true : confirm ('R U SURE?');
+    }
+
+
+</pre>
+
+</body>
+</html>

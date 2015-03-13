@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>function UpperCase</title>
+</head>
+<body>
+<script type="text/javascript">
+
+
+
+    var str = prompt("Enter string","");
+
+    function truncate(str, maxlength) {                     // функция с заменой макс символов в строке
+        if (str.length > maxlength) {
+            return str.slice(0, maxlength - 3) + '...';     // slice возвращает индексы со старта 0 индекса до конца maxlength
+        }                                                   // -3 нужно чтоб макс длинна не выходила за макс значение
+
+        return str;
+    }
+
+    alert( truncate(str, 20) );
+
+
+
+</script>
+
+<pre>
+
+
+    var str = prompt("Enter string","");
+
+    function truncate(str, maxlength) {                     // функция с заменой макс символов в строке
+        if (str.length > maxlength) {
+            return str.slice(0, maxlength - 3) + '...';     // slice возвращает индексы со старта 0 индекса до конца maxlength
+        }                                                   // -3 нужно чтоб макс длинна не выходила за макс значение
+
+        return str;
+    }
+
+    alert( truncate(str, 20) );
+
+
+</pre>
+
+</body>
+</html>

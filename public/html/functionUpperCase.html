@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>function UpperCase</title>
+</head>
+<body>
+<script type="text/javascript">
+
+
+
+
+     var str = prompt("Enter string","");
+
+     alert(firstLetter(str));
+
+     function firstLetter(str){                       // функция которая меняет первый символ строки на заглавный
+     var strUp = str.charAt(0).toUpperCase();
+     for (var i=1; i<str.length; i++){
+     strUp += str.charAt(i);
+     }
+
+     return strUp;
+     }
+
+
+
+</script>
+
+<pre>
+
+
+var str = prompt("Enter string","");
+
+alert(firstLetter(str));
+
+function firstLetter(str){
+    var strUp = str.charAt(0).toUpperCase();  // нулевой индекс строки приводим в аппер кейс и записываем в новую переменную
+    for (var i=1; i < str.length; i++){       // перебираем все индексы строки начиная с первого
+        strUp += str.charAt(i);               // c каждой итерацией прибавляем индекс к созданной переменной куда поместили 0 индекс с заглавной буквой
+    }
+
+return strUp;                                 // возращаем это переменную по окончании перебора цикла
+}
+
+
+
+
+</pre>
+
+</body>
+</html>

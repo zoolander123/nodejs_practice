@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>replace 2</title>
+</head>
+<body>
+<script type="text/javascript">
+
+
+
+     var text = "Morbi est metus, tristique nec 3 faucibus vel, sollicitudin  est a nunc. metus 44 Cras dictum sem eget ligula lobortis 3 posuere.";
+
+     var oldWord = prompt("enter old text","");
+     var newWord = prompt("enter new text","");
+
+     //    var result = text.replace (oldWord,newWord);
+     var result = text.replace (new RegExp(oldWord, 'g'), newWord);
+
+     alert(result);
+
+
+
+
+</script>
+
+<pre>
+
+В первый промт вводится первое слово, во второй то слово на которое оно будет заменено
+
+
+
+    var text = "Morbi est metus, tristique nec 3 faucibus vel, sollicitudin  est a nunc. metus 44 Cras dictum sem eget ligula lobortis 3 posuere.";
+
+    var oldWord = prompt("enter old text","");
+    var newWord = prompt("enter new text","");
+
+    //    var result = text.replace (oldWord,newWord);
+    var result = text.replace (new RegExp(oldWord, 'g'), newWord);       // т.к. в replace нельзя записать переменную
+                                                                            в качестве первого параметра используем -
+     alert(result);                                                         new RegExp (x, 'g') где 'g' ключ указывающий на глобальную замену
+
+
+
+
+
+
+</pre>
+
+</body>
+</html>

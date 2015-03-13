@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>2 пример If Else </title>
+</head>
+<body>
+<script type="text/javascript">
+
+    var testIF2 = prompt('Enter your login', '');
+
+    if (testIF2 == "Admin") {
+        var ifAdmin = prompt('Enter your password', '');
+        if (ifAdmin == 'Dark Lord') {
+            alert('Welcome, Master!!!');
+        } else if (ifAdmin == null){
+            alert('Abort');
+        } else {
+            alert('Wrong password');
+        }
+
+    } else if (testIF2 == null) {
+        alert('Abort');
+
+    } else {
+        alert('I don’t know u');
+    }
+
+
+</script>
+
+<pre>
+ var testIF2 = prompt('Enter your login', '');
+
+     if (testIF2 == "Admin") {
+        var ifAdmin = prompt('Enter your password', '');
+        if (ifAdmin == 'Dark Lord') {
+            alert('Welcome, Master!!!');
+        } else if (ifAdmin == null){
+            alert('Abort');
+        } else {
+            alert('Wrong password');
+        }
+
+     } else if (testIF2 == null) {
+        alert('Abort');
+
+     } else {
+        alert('I don’t know u');
+     }
+</pre>
+
+</body>
+</html>

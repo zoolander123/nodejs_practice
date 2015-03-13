@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>array push number 5</title>
+</head>
+<body>
+<script type="text/javascript">
+
+    var num  = {"zero":0, "one":1, "two":2, "three":3, "four":4, "five":5, "six":6, "seven":7,"eight":8, "nine":9};
+    var numbers = [];
+    do {
+
+        var inp = prompt("Enter the number:", "");
+        if(inp == null) break;
+
+        if(isNaN(inp))
+        {
+            var nn = num[inp.toLowerCase()];
+            if(nn != undefined) numbers.push(nn);
+        }
+        else numbers.push(parseInt(inp));
+
+    } while(true)
+
+    var sum = 0;
+    for(var i=0; i < numbers.length; i++) sum += numbers[i];
+    alert("Array sum: "+sum);
+
+
+</script>
+
+<pre>
+
+Ввести в массив числительные. Остальные значения игнорируются. И вывести сумму массива.
+
+    var num  = {"zero":0, "one":1, "two":2, "three":3, "four":4, "five":5, "six":6, "seven":7,"eight":8, "nine":9};
+    var numbers = [];
+    do {
+
+        var inp = prompt("Enter the number:", "");
+        if(inp == null) break;
+
+        if(isNaN(inp))
+        {
+            var nn = num[inp.toLowerCase()];
+            if(nn != undefined) numbers.push(nn);
+        }
+        else numbers.push(parseInt(inp));
+
+    } while(true)
+
+    var sum = 0;
+    for(var i=0; i < numbers.length; i++) sum += numbers[i];
+    alert("Array sum: "+sum);
+
+</pre>
+
+</body>
+</html>

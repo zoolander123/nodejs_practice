@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>function 1</title>
+</head>
+<body>
+<script type="text/javascript">
+
+
+
+    function count(){
+        if (cc>18) {
+            return true;
+        } else {
+            return confirm(' точно меньше 18 ??!! ');
+        }
+    }
+
+    var cc = prompt('возраст','');
+
+    if ( count() ) {
+        alert('тру при нажатии ОК');
+    } else alert('фалсе при нажатии Cancel');
+
+</script>
+
+<pre>
+     function count(){          /мутная херня
+        if (cc>18) {
+            return true;
+        } else {
+            return confirm(' точно меньше??!! ');
+        }
+     }
+
+     var cc = prompt('возраст','');
+
+     if ( count() ) {
+        alert('тру при нажатии ОК');
+     } else alert('фалсе при нажатии Cancel');
+
+
+
+</pre>
+
+</body>
+</html>

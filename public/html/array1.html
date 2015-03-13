@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>array push number 1</title>
+</head>
+<body>
+<script type="text/javascript">
+
+    var numbers = [];
+
+    while(true) {
+
+        var value = +prompt("Введите число", '');
+
+        if (!value) break; // '', NaN или null (отмена)
+
+        numbers.push(value);
+    }
+
+    var sum = 0;
+    for(var i=0; i<numbers.length; i++) {
+        sum += numbers[i];
+    }
+
+    alert(sum);
+
+
+</script>
+
+<pre>
+
+    напишите код который
+    Запрашивает по очереди значения при помощи prompt и сохраняет их в массиве.
+    Заканчивает ввод, как только посетитель введёт пустую строку, не число или нажмёт «Отмена».
+    Выводит сумму всех значений массива
+
+
+    var numbers = [];
+
+    while(true) {
+
+        var value = +prompt("Введите число", '');
+
+        if (!value) break;                          // '', NaN или null (отмена)
+
+        numbers.push(value);
+    }
+
+    var sum = 0;
+    for(var i=0; i < numbers.length; i++) {
+        sum += numbers[i];
+    }
+
+    alert(sum);
+
+
+
+</pre>
+
+</body>
+</html>

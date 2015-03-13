@@ -15,6 +15,9 @@
     <li><a href="#functions">Функции</a></li>
     <li><a href="#methods">Методы и свойства</a></li>
     <li><a href="#strict">"use strict";</a></li>
+    <li><a href="#objects">"Объекты";</a></li>
+    <li><a href="#arrays">"Массивы";</a></li>
+    <li><a href="#strings">"Строки";</a></li>
 </ul>
 
 <script type="text/javascript">
@@ -74,244 +77,155 @@
 
     document.write ("<a href='#menu'>ВВЕРХ</a> Оператор <b style='color:red;' id='ifElse'>IF ELSE</b><br>");
 
-    document.write ("Оператор <b>if</b> (...) вычисляет и преобразует выражение в скобках к логическому типу. (true or false). " +
-    "Необязательный блок else («иначе») выполняется, если условие неверно.<br>" +
-    "Иногда нужно в зависимости от условия присвоить переменную. Оператор вопросительный знак '?' позволяет это делать: access = (age > 14) ? true : false<br><br>" +
+    document.write ('Оператор <b>if</b> (...) вычисляет и преобразует выражение в скобках к логическому типу. (true or false). ' +
+    'Необязательный блок else («иначе») выполняется, если условие неверно.<br>' +
+    'Иногда нужно в зависимости от условия присвоить переменную. Оператор вопросительный знак "?" позволяет это делать: access = (age > 14) ? true : false<br><br>' +
+    '<span style="color:#696900"> ' +
+    ' var testIF1 = prompt("Введите число");   <br>' +
+    'if (testIF1 > 0) {                        <br>' +
+    '     alert("Значение больше нуля");       <br>' +
+    '} else if (testIF1 < 0) {                 <br>' +
+    '    alert("Значение меньше нуля");        <br>' +
+    '} else {                                  <br>' +
+    '    alert("Значение равно нулю");         <br>' +
+    '}                                         <br><br>' +
 
-    " var testIF1 = prompt('Введите число');   <br>" +
-    "if (testIF1 > 0) {                        <br>" +
-    "     alert('Значение больше нуля');       <br>" +
-    "} else if (testIF1 < 0) {                 <br>" +
-    "    alert('Значение меньше нуля');        <br>" +
-    "} else {                                  <br>" +
-    "    alert('Значение равно нулю');         <br>" +
-    "}                                         <br><br>" +
+    'var testIF4 = prompt("Enter your login", " ");             <br>' +
+    '(testIF4 == "Bob")? alert("Hi") :                           <br>' +
+    '(testIF4 == "Headmaster")? alert("Nice to meet you") :     <br>' +
+    '(testIF4 == "")? alert("login absent") : alert("WTF ??");  </span><br><br>' +
 
+    '<a href="html/ifElse.html" target="_blank" style="color:dimgrey">Пример <b>If Else</b> </a><br>'+
+    '<a href="html/ifElse2.html" target="_blank" style="color:dimgrey">Пример <b>If Else</b> </a><br>'+
+    '<a href="html/ifElse3.html" target="_blank" style="color:dimgrey">Пример <b>If Else</b> </a><br>'+
+    '<a href="html/ifElse4.html" target="_blank" style="color:dimgrey">Пример <b>? :</b> </a><br>'+
+    '<a href="html/ifElse5.html" target="_blank" style="color:dimgrey">Пример <b>? :</b> </a><br>'+
 
-    "var testIF4 = prompt('Enter your login', ' ');             <br>" +
-    "(testIF4 =='Bob')? alert('Hi') :                           <br>" +
-    "(testIF4 == 'Headmaster')? alert('Nice to meet you') :     <br>" +
-    "(testIF4 == '')? alert('login absent') : alert('WTF ??');  <br>" +
-    "<br><br>");
-
-
-/*   var testIF = prompt('Каково «официальное» название JavaScript?', '');
-     if (testIF == 'EcmaScript') {
-     alert ('Верно!');
-     }   else {
-     alert ('Не знаете? «EcmaScript»!');
-     }
-
-
-                                     var testIF1 = prompt('Введите число');
-                                     if (testIF1 > 0) {
-                                     alert('Значение больше нуля');
-                                     } else if (testIF1 < 0) {
-                                     alert('Значение меньше нуля');
-                                     } else {
-                                     alert('Значение равно нулю');
-                                     }
-
-
-     var testIF2 = prompt('Enter your login', '');
-     if (testIF2 == "Admin") {
-     var ifAdmin = prompt('Enter your password', '');
-     if (ifAdmin == 'Dark Lord') {
-     alert('Welcome, Master!!!');
-     } else if (ifAdmin == null){
-     alert('Abort');
-     } else {
-     alert('Wrong password');
-     }
-     } else if (testIF2 == null) {
-     alert('Abort');
-     } else {
-     alert('I don’t know u');
-     }
-
-
-                                     var a=1, b=6;
-                                     var testIF3 = (a + b < 4)? 'correct' : 'incorrect';
-                                     alert (testIF3);
+    '<br><br>');
 
 
 
-     var testIF4 = (login =='Bob')? 'Hi' : (login == 'Headmaster')? 'Nice to meet you' : (login == '')? 'login absent' : '';
+    document.write ('<a href="#menu">ВВЕРХ</a> Операторы <b style="color:red;" id="&&"> || (ИЛИ), && (И) и ! (НЕ). </b><br>' +
+    'Они называются «логическими», но в JavaScript могут применяться к значениям любого типа и возвращают также значения любого типа.<br><br>' +
+    'Логическое || (ИЛИ) в классическом программировании работает следующим образом: «если хотя бы один из аргументов true, то возвращает true, иначе — false».<br>' +
+    'Если первый аргумент — true, то результат заведомо будет true (хотя бы одно из значений — true), и остальные значения игнорируются.<br>' +
+    'Оператор <b>|| (ИЛИ) возвращает то значение, на котором остановились</b> вычисления.<br><br>' +
+    '<span style="color:#696900"> ' +
+    'var x; <br>' +
+    'true || (x = 1);   // просто вычислим ИЛИ, без if <br>' +
+    'alert(x); // undefined, x не присвоен <br><br>' +
 
-     var testIF4 = prompt('Enter your login', '');
-     (testIF4 =='Bob')? alert('Hi') :
-     (testIF4 == 'Headmaster')? alert('Nice to meet you') :
-     (testIF4 == '')? alert('login absent') : alert('WTF ??');
+    'var undef; // переменная не присвоена, т.е. равна undefined                    <br>' +
+    'var zero = 0;                                                                  <br>' +
+    'var emptyStr = " ";                                                            <br>' +
+    'var msg = "Привет!";                                                           <br>' +
+    'var result = undef || zero || emptyStr || msg || 0;                            <br>' +
+    'alert(result) // выведет "Привет!" - первое значение, которое является true    </span><br><br>' +
+    
+    '<a href="html/or.html" target="_blank" style="color:dimgrey">Пример <b>||</b> </a><br>'+
+    '<br><br>');
+    
+    
+    document.write ('В классическом программировании && (И) возвращает true, если оба аргумента истинны, а иначе — false<br>' +
+    '<b> Если левый аргумент — false, оператор && (И) возвращает его и заканчивает вычисления</b> . Иначе — вычисляет и возвращает правый аргумент. <br> <br>' +
+    '<span style="color:#696900"> ' +
+    'alert( true  && true ); // true    <br>' +
+    'alert( false && true ); // false   <br>' +
+    'alert( true  && false); // false   <br>' +
+    'alert( false && false); // false   <br><br>' +
 
-
-
-
-                                     var testIF5 = prompt('Enter number from 1 to 10','');
-                                     if (testIF5 < 5) {
-                                     if (testIF5 > 0) {
-                                     alert ('Number is smaller then 5');
-                                     } else if (testIF5 == 0) {                 // также цепляет пустой рядок с ОК батон
-                                     alert('Don’t use 0');
-                                     } else if (testIF5 < 0) {
-                                     alert('Enter positive number');
-                                     } else if (testIF5 == null) {
-                                     alert('null');
-                                     } else ('sdsdsdsds');
-                                     } else if (testIF5 > 5) {
-                                     alert('Number is bigger then 5');
-                                     } else if (testIF5 == 5) {
-                                     alert('Number is equal to 5');
-                                     } else alert ('Wrong type of object');
-*/
-
-
-    document.write ("<a href='#menu'>ВВЕРХ</a> Операторы <b style='color:red;' id='&&'> || (ИЛИ), && (И) и ! (НЕ). </b><br>" +
-    "Они называются «логическими», но в JavaScript могут применяться к значениям любого типа и возвращают также значения любого типа.<br><br>" +
-    "Логическое || (ИЛИ) в классическом программировании работает следующим образом: «если хотя бы один из аргументов true, то возвращает true, иначе — false».<br>" +
-    "Если первый аргумент — true, то результат заведомо будет true (хотя бы одно из значений — true), и остальные значения игнорируются.<br>" +
-    "Оператор <b>|| (ИЛИ) возвращает то значение, на котором остановились</b> вычисления.<br><br>" +
-
-    "var x; <br>" +
-    "true || (x = 1);   // просто вычислим ИЛИ, без if <br>" +
-    "alert(x); // undefined, x не присвоен <br><br>" +
-
-    "var undef; // переменная не присвоена, т.е. равна undefined                    <br>" +
-    "var zero = 0;                                                                  <br>" +
-    "var emptyStr = ' ';                                                            <br>" +
-    "var msg = 'Привет!';                                                           <br>" +
-    "var result = undef || zero || emptyStr || msg || 0;                            <br>" +
-    "alert(result) // выведет 'Привет!' - первое значение, которое является true    <br><br>");
-
-    document.write ("В классическом программировании && (И) возвращает true, если оба аргумента истинны, а иначе — false<br>" +
-    "<b> Если левый аргумент — false, оператор && (И) возвращает его и заканчивает вычисления</b> . Иначе — вычисляет и возвращает правый аргумент. <br> <br>" +
-    "alert( true  && true ); // true    <br>" +
-    "alert( false && true ); // false   <br>" +
-    "alert( true  && false); // false   <br>" +
-    "alert( false && false); // false   <br><br>" +
-
-    "if ( 1 && 0 ) { // вычислится как true && false    <br>" +
-    "alert('не сработает, т.к. условие ложно');         <br>" +
-    " }                                                 <br><br>" +
+    'if ( 1 && 0 ) { // вычислится как true && false    <br>' +
+    'alert("не сработает, т.к. условие ложно");         <br>' +
+    ' }                                                 <br><br>' +
 
 
-    "// Первый аргумент - true, Поэтому возвращается второй аргумент                <br>" +
-    "alert(1 && 0);  // 0                                                           <br>" +
-    "alert(1 && 5);  // 5                                                           <br>" +
-    "// Первый аргумент - false, Он и возвращается, а второй аргумент игнорируется  <br>" +
-    "alert(null && 5);  // null                                                     <br>" +
-    "alert(0 && 'не важно'); // 0                                                  <br><br>");
+    '// Первый аргумент - true, Поэтому возвращается второй аргумент                <br>' +
+    'alert(1 && 0);  // 0                                                           <br>' +
+    'alert(1 && 5);  // 5                                                           <br>' +
+    '// Первый аргумент - false, Он и возвращается, а второй аргумент игнорируется  <br>' +
+    'alert(null && 5);  // null                                                     <br>' +
+    'alert(0 && "не важно"); // 0                                                   </span><br><br>' +
+
+    '<a href="html/and_!.html" target="_blank" style="color:dimgrey">Пример <b>&&</b> а также <b>!</b>  </a><br>'+
+    '<br><br>');
 
 
     document.write ("<b>Оператор ! (НЕ) сначала приводит аргумент к логическому типу true/false. Затем возвращает противоположное значение</b>.<br>" +
+    '<span style="color:#696900"> ' +
     "alert( !true ) // false<br>" +
     "alert( !0 )  // true);<br><br>" +
 
     "В частности, двойное НЕ используются для преобразования значений к логическому типу:<br>" +
     "alert( !!'строка' )  // true <br>" +
-    "alert( !!null ) // false <br><br><br>");
-
-/*
-    var testIF6 = prompt('Введите число',"");
-    if (testIF6 >= 14 && testIF6 <= 90) {
-    alert('Переменная в диапазоне 14 и 90');
-    } else if (testIF6 < 14) {
-            if (testIF6 >= 1) {
-            alert('Переменная меньше 14');
-            } else if (testIF6 == 0) {                 // также цепляет пустой рядок с ОК батон
-            alert('Don’t use 0');
-            } else if (testIF6 < 0) {
-            alert('Enter positive number');
-            } else if (testIF6 == null) {
-            alert('null');
-            } else ('sdsdsdsds');
-    } else if (testIF6 > 90) {
-    alert('Переменная больше 90');
-    } else {alert('Переменная не задана');}
-
-
-    var testIF7 = prompt('Введите число',"");
-    if ( !(testIF7 >= 14 && testIF7 <= 90) ) {
-        alert('переменная не в диапазоне 14-90');
-    } else {alert('Переменная в диапазоне');}
-
-
-    var testIF8 = prompt('Введите число',"");
-    if (testIF8 <= 14 || testIF8 >= 90) {
-    alert('переменная не в диапазоне 14-90');
-    }
- */
+    "alert( !!null ) // false </span><br><br><br>");
 
 
 
 
 document.write('<a href="#menu">ВВЕРХ</a> Циклы <b style="color: red" id="doWhileFor">DO, WHILE, FOR</b><br>');
-    document.write("Для многократного повторения одного участка кода - предусмотрены циклы. Повторение цикла называется «итерация».<br><br>" +
+    document.write('Для многократного повторения одного участка кода - предусмотрены циклы. Повторение цикла называется «итерация».<br><br>' +
 
-    "Цикл WHILE                                                                 <br>"+
-    "var i = 3                                                                  <br>"+
-    "while (i) { // при i=0 значение в скобках будет false и цикл остановится   <br>"+
-    "    alert(i);                                                              <br>"+
-    "    i--;  }                                                                <br><br>" +
+    'Цикл WHILE                                                                 <br>'+
+    '<span style="color:#696900"> ' +
+    'var i = 3                                                                  <br>'+
+    'while (i) { // при i=0 значение в скобках будет false и цикл остановится   <br>'+
+    '    alert(i);                                                              <br>'+
+    '    i--;  }                                                                </span><br><br>' +
 
-    "Цикл DO WHILE      <br>"+
-    "var i = 0;         <br>"+
-    "do {               <br>"+
-    "alert(i);          <br>"+
-    "i++;               <br>"+
-    "} while (i < 3);   <br><br>" +
+    '<a href="html/while.html" target="_blank" style="color:dimgrey">Пример цикла <b>while</b> </a><br>'+
+    '<br><br>' +
 
-    "Цикл FOR                       <br>"+
-    "for (начало; условие; шаг) {   <br>"+
-    "// ... тело цикла ...          <br>"+
-    "}                              <br><br>" +
+    'Цикл DO WHILE      <br>'+
+    '<span style="color:#696900"> ' +
+    'var i = 0;         <br>'+
+    'do {               <br>'+
+    'alert(i);          <br>'+
+    'i++;               <br>'+
+    '} while (i < 3);   </span><br><br>' +
 
-    "var i;                         <br>"+
-    "for (i=0; i<3; i++) {          <br>"+
-    "alert(i);                      <br>"+
-    "}                              <br>");
+    '<a href="html/do_while.html" target="_blank" style="color:dimgrey">Пример цикла <b>do while</b> </a><br>'+
+    '<br><br>' +
 
-    document.write('Начало i=0 выполняется при заходе в цикл. Условие i<3 проверяется перед каждой итерацией. <br>' +
+    'Цикл FOR                       <br>'+
+    '<span style="color:#696900"> ' +
+    'for (начало; условие; шаг) {   <br>'+
+    '// ... тело цикла ...          <br>'+
+    '}                              <br><br>' +
+
+    'var i;                         <br>'+
+    'for (i=0; i<3; i++) {          <br>'+
+    'alert(i);                      <br>'+
+    '}                              </span><br>'+
+
+    'Начало i=0 выполняется при заходе в цикл. Условие i<3 проверяется перед каждой итерацией. <br>' +
     'Шаг i++ выполняется после каждой итерации, но перед проверкой условия. <b>Любая часть for может быть пропущена,</b> ' +
-    'но обязательно должны присутствовать ; для разограничений (; i<3;)</b><br><br><br>');
+    'но обязательно должны присутствовать ; для разограничений (; i<3;)</b><br><br>' +
+
+    '<a href="html/for.html" target="_blank" style="color:dimgrey">Пример цикла <b>for</b> </a><br>'+
+    '<br><br><br>');
 
 
-/*
-    var testDoWhile;
-    do {
-        testDoWhile=prompt("Enter Number bigger then 100",'');
-    } while(testDoWhile < 100 && testDoWhile != null);
-
-
-    var testWhile = 0;
-    while (testWhile < 100 && testWhile != null) {
-        testWhile=prompt("Enter Number bigger then 100",'');
-    }
-
-
-    for (var testFor = 0; testFor < 100 && testFor != null;){
-     testFor = prompt("num","");
-    }
-*/
 
     document.write("<a href='#menu'>ВВЕРХ</a> Директивы <b style='color: red' id='breakContinue'>BREAK и CONTINUE</b> используются для более гибкого управления циклом.<br>" +
     "Директива <b>BREAK обеспечивает возможность выйти из цикла в любой момент</b>, а не только при проверке условия.<br><br>" +
+    '<span style="color:#696900"> ' +
     "var i=0;                               <br>"+
     "while(1) {                             <br>"+
     "i++;                                   <br>"+
     "if (i==5) break;                       <br>"+
     "alert(i);                              <br>"+
     "}                                      <br>"+
-    "alert('Последняя i = '+ i ); // 5 (*)  <br>"+
+    "alert('Последняя i = '+ i ); // 5 (*)  </span><br>"+
     "Выполнение продолжится со строки (*), следующей за циклом.<br><br>" +
 
 
     "Директива <b>CONTINUE прекращает выполнение текущей итерации цикла</b>. Например, цикл ниже не выводит четные значения.<br>" +
     "Для четных i срабатывает continue, выполнение блока прекращается и управление передается на for.<br><br>" +
-
+    '<span style="color:#696900"> ' +
     "for (var i = 0; i < 10; i++) {     <br>"+
     "if (i % 2 == 0) continue;          <br>"+
     "alert(i);                          <br>"+
-    "}                                  <br><br>" +
+    "}                                  </span><br><br>" +
     "" +
     "Бывает нужно выйти одновременно из нескольких уровней цикла. Но обычный вызов break в строке (*) не может прервать два цикла сразу. " +
     "Один из способов — <b>поставить метку</b>. <br>Метка имеет вид 'имя:', имя должно быть уникальным. " +
@@ -324,244 +238,118 @@ document.write('<a href="#menu">ВВЕРХ</a> Циклы <b style="color: red" 
         если не делится, то i - простое число
         }
 */
+    '<span style="color:#696900"> ' +
     "nextPrime:                                     <br>"+
     "        for(var i=2; i < 10; i++) {            <br>"+
     "    for(var j=2; j < i; j++) {                 <br>"+
     "        if ( i % j == 0) continue nextPrime;   <br>"+
     "    }                                          <br>"+
     "    alert(i);  // простое                      <br>"+
-    "}                                              <br><br>");
+    "}                                              </span><br><br>");
 
 
 
-    document.write ("<a href='#menu'>ВВЕРХ</a> Конструкция <b style='color: red' id='switch'>SWITCH</b><br>" +
-    "Конструкция switch сравнить выражение сразу с несколькими вариантами:<br><br>" +
+    document.write ('<a href="#menu">ВВЕРХ</a> Конструкция <b style="color: red" id="switch">SWITCH</b><br>' +
+    'Конструкция switch сравнить выражение сразу с несколькими вариантами:<br><br>' +
 
-    "switch(x) {                                <br>" +
-    "case 'value1':  // if (x === 'value1')     <br>" +
-    "...                                        <br>" +
-    "[break]                                    <br>" +
-    "case 'value2':  // if (x === 'value2')     <br>" +
-    "...                                        <br>" +
-    "[break]                                    <br>" +
-    "default:                                   <br>" +
-    "...                                        <br>" +
-    "[break]                                    <br>" +
-    "}                                          <br>");
+    '<span style="color:#696900"> ' +
+    'switch(x) {                                <br>' +
+    'case "value1":  // if (x === "value1")     <br>' +
+    '...                                        <br>' +
+    '[break]                                    <br>' +
+    'case "value2":  // if (x === "value2")     <br>' +
+    '...                                        <br>' +
+    '[break]                                    <br>' +
+    'default:                                   <br>' +
+    '...                                        <br>' +
+    '[break]                                    <br>' +
+    '}                                          </span><br>' +
 
-    document.write ("Переменная x проверяется на строгое равенство первому значению value1, затем второму value2 и так далее.<br> " +
-    "Если соответствие установлено — switch начинает выполняться от соответствующей директивы case и далее, до ближайшего break (или до конца switch). " +
-    "При этом case называют вариантами switch. Если ни один case не совпал — выполняетcя (если есть) вариант default.<br><br>" +
+    'Переменная x проверяется на строгое равенство первому значению value1, затем второму value2 и так далее.<br> ' +
+    'Если соответствие установлено — switch начинает выполняться от соответствующей директивы case и далее, до ближайшего break (или до конца switch). ' +
+    'При этом <b>case</b> называют вариантами switch. Если ни один case не совпал — выполняетcя (если есть) вариант default.<br><br>' +
 
-    "var a = 2+2;                       <br>" +
-    "switch (a) {                       <br>" +
-    "case 3:                            <br>" +
-    "alert('Маловато');                 <br>" +
-    "<b>case 4</b>:                     <br>" +
-    "alert('В точку!'); // нету Break   <br>" +
-    "<b>case 5</b>:                     <br>" +
-    "alert('Перебор');                  <br>" +
-    "<b>default:</b>                    <br>" +
-    "alert('Я таких значений не знаю'); <br>" +
-    "}                                  <br>" +
-    "В примере выше последовательно выполнятся три alert. Условие начинает выполняться с case где значение '4' и дальше выполняется case '5' и default. " +
-    "Так как нету Break.<br> В case могут быть любые выражения, в том числе включающие в себя переменные и функции. Несколько значений case можно группировать.<br><br>" +
+    '<span style="color:#696900"> ' +
+    'var a = 2+2;                       <br>' +
+    'switch (a) {                       <br>' +
+    'case 3:                            <br>' +
+    'alert("Маловато");                 <br>' +
+    '<b>case 4</b>:                     <br>' +
+    'alert("В точку!"); // нету Break   <br>' +
+    '<b>case 5</b>:                     <br>' +
+    'alert("Перебор");                  <br>' +
+    '<b>default:</b>                    <br>' +
+    'alert("Я таких значений не знаю"); <br>' +
+    '}                                  </span><br>' +
+    'В примере выше последовательно выполнятся три alert. Условие начинает выполняться с case где значение "4" и дальше выполняется case "5" и default. ' +
+    'Так как нету Break.<br> В case могут быть любые выражения, в том числе включающие в себя переменные и функции. Несколько значений case можно группировать.<br><br>' +
 
-    " var a = 2+2;                      <br>" +
-    "switch (a) {                       <br>" +
-    "case 4:                            <br>" +
-    "alert('Верно!');                   <br>" +
-    "break;                             <br>" +
-    "case 3:               // (*)       <br>" +
-    "case 5:               // (**)      <br>" +
-    "alert('Неверно!');                 <br>" +
-    "break;                             <br>" +
-    "default:                           <br>" +
-    "alert('Я таких значений не знаю'); <br>" +
-    "}<br>" +
-    "При case 3 выполнение идёт со строки (*) и идёт вниз до ближайшего break, таким образом проходя и то, что предназначено для case 5.<br><br><br>");
+    '<span style="color:#696900"> ' +
+    ' var a = 2+2;                      <br>' +
+    'switch (a) {                       <br>' +
+    'case 4:                            <br>' +
+    'alert("Верно!");                   <br>' +
+    'break;                             <br>' +
+    'case 3:               // (*)       <br>' +
+    'case 5:               // (**)      <br>' +
+    'alert("Неверно!");                 <br>' +
+    'break;                             <br>' +
+    'default:                           <br>' +
+    'alert("Я таких значений не знаю"); <br>' +
+    '}</span><br>' +
+    'При case 3 выполнение идёт со строки (*) и идёт вниз до ближайшего break, таким образом проходя и то, что предназначено для case 5.<br><br>'+
 
-
-/*
-Напишите if..else, соответствующий следующему switch:
-
-switch (browser) {
-
-case 'IE':
-alert('О, да у вас IE!');
-break;
-
-case 'Chrome':
-case 'Firefox':
-case 'Safari':
-case 'Opera':
-alert('Да, и эти браузеры мы поддерживаем');
-break;
-
-default:
-alert('Мы надеемся, что и в вашем браузере все ок!');
-}
-
-
-
-                            var browser = prompt("name","");
-                                if (browser == "IE") {
-                                    alert('О, да у вас IE!');
-                                } else if (browser == 'Chrome' || browser =='Firefox' || browser =='Safari' || browser =='Opera') {
-                                    alert('Да, и эти браузеры мы поддерживаем');
-                                } else alert('Мы надеемся, что и в вашем браузере все ок!');
-
-
-var a = prompt('a?', '');
-if (a == 0) {
-alert(0);
-}
-if (a == 1) {
-alert(1);
-}
-if (a == 2 ||  a == 3) {
-alert('2,3');
-}
-
-                                    a = prompt('a?', '');
-                                    switch (a){
-                                    case "0":
-                                    alert("0");
-                                    break;
-
-                                    case "1":
-                                    alert("1");
-                                    break;
-
-                                    case "2":
-                                    case "3":
-                                    alert("2,3");
-                                    break;
-                                    }
- */
+    '<a href="html/switch1.html" target="_blank" style="color:dimgrey">Пример <b>switch</b> как if else</a><br>'+
+    '<a href="html/switch2.html" target="_blank" style="color:dimgrey">Пример <b>switch</b> как if else</a><br>'+
+    '<br><br><br>');
 
 
 
 
+    document.write('<a href="#menu">ВВЕРХ</a><b style="color: red" id="functions"> Функции</b><br>' +
+    'Функция может содержать локальные переменные, объявленные через var. Такие переменные видны только внутри функции. <br>' +
+    'Блоки if/else, switch, for, while, do..while не влияют на область видимости переменных. ' +
+    'При объявлении переменной в таких блоках, она всё равно будет видна во всей функции. <br> Функция может обратиться ко внешней переменной. ' +
+    'Если есть внешняя и локальная переменные, то все обращения использовали бы локальную, и внешняя переменная осталась бы неизменной.<br>' +
+    'При обращении к необъявленной переменной функция будет искать внешнюю переменную с таким именем. <br>' +
+    'Переменные, объявленные на уровне всего скрипта, называют «глобальными переменными».<br><br>' +
+    'Функцию можно вызвать с любым количеством аргументов. Если параметр не передан при вызове — он считается равным undefined.<br> ' +
+    'Такую ситуацию можно отловить и назначить значение «по умолчанию»:<br><br>' +
+
+    '<span style="color:#696900"> ' +
+    'function showMessage(from, text) { <br>' +
+    'if (text === undefined) {          <br>' +
+    'text = "текст не передан";         <br>' +
+    '}                                  </span><br><br>' +
+
+    'Функция может возвратить результат, который будет передан в вызвавший её код. Для возврата значения используется директива <b>return.</b><br> ' +
+    'Как только до нее доходит управление — функция завершается и значение передается обратно. <br>' +
+    'Директива return может также использоваться без значения, чтобы прекратить выполнение и выйти из функции.<br> ' +
+    'Если return; вызван без значения, или функция завершилась без return, то её результат равен undefined.<br><br>' +
+
+    '<span style="color:#696900"> ' +
+    'function showMovie(age) {              <br>' +
+    'if (!checkAge(age)) {                  <br>' +
+    'return;                                <br>' +
+    '}                                      <br>' +
+    'alert("Фильм не для всех"); // (*)     <br>' +
+    '// ...                                 <br>' +
+    '}                                      </span><br><br>'+
+
+    '<a href="html/function1.html" target="_blank" style="color:dimgrey">Пример <b>function</b> </a><br>'+
+    '<a href="html/function2.html" target="_blank" style="color:dimgrey">Пример <b>function</b> </a><br>'+
+    '<a href="html/function3.html" target="_blank" style="color:dimgrey">Пример <b>function</b> </a><br>'+
+    '<a href="html/function4.html" target="_blank" style="color:dimgrey">Пример <b>function</b> </a><br>'+
+    '<a href="html/function5.html" target="_blank" style="color:dimgrey">Пример <b>function</b> </a><br><br>'+
+
+    '<a href="html/functionPower.html" target="_blank" style="color:dimgrey">Функция возведения в степерь </a><br><br>'+
 
 
-    document.write("<a href='#menu'>ВВЕРХ</a><b style='color: red' id='functions'> Функции</b><br>" +
-    "Функция может содержать локальные переменные, объявленные через var. Такие переменные видны только внутри функции. <br>" +
-    "Блоки if/else, switch, for, while, do..while не влияют на область видимости переменных. " +
-    "При объявлении переменной в таких блоках, она всё равно будет видна во всей функции. <br> Функция может обратиться ко внешней переменной. " +
-    "Если есть внешняя и локальная переменные, то все обращения использовали бы локальную, и внешняя переменная осталась бы неизменной.<br>" +
-    "При обращении к необъявленной переменной функция будет искать внешнюю переменную с таким именем. <br>" +
-    "Переменные, объявленные на уровне всего скрипта, называют «глобальными переменными».<br><br>" +
-    "Функцию можно вызвать с любым количеством аргументов. Если параметр не передан при вызове — он считается равным undefined.<br> " +
-    "Такую ситуацию можно отловить и назначить значение «по умолчанию»:<br><br>" +
-
-    "function showMessage(from, text) { <br>" +
-    "if (text === undefined) {          <br>" +
-    "text = 'текст не передан';         <br>" +
-    "}                                  <br><br>" +
-
-    "Функция может возвратить результат, который будет передан в вызвавший её код. Для возврата значения используется директива <b>return.</b><br> " +
-    "Как только до нее доходит управление — функция завершается и значение передается обратно. <br>" +
-    "Директива return может также использоваться без значения, чтобы прекратить выполнение и выйти из функции.<br> " +
-    "Если return; вызван без значения, или функция завершилась без return, то её результат равен undefined.<br><br>" +
-
-    "function showMovie(age) {              <br>" +
-    "if (!checkAge(age)) {                  <br>" +
-    "return;                                <br>" +
-    "}                                      <br>" +
-    "alert('Фильм не для всех'); // (*)     <br>" +
-    "// ...                                 <br>" +
-    "}                                      <br><br>");
+    'В коде функции могут вызывать другие функции для выполнения подзадач. Частный случай подвызова — когда функция вызывает сама себя.<br> ' +
+    'Это называется <b>рекурсией.</b><br>' +
+    '...<br><br><br>');
 
 
-    /*
-     function showMessage(name, text) {
-     name = '**' + name + '**';                          // красиво оформили from
-     alert(name + '\n\n' + text +" eeeee");
-     }
-     var hello = 'Как дела!', name = 'Маша';
-
-     showMessage(name, hello);                           // значения будут скопированы в параметры
-     alert(name);
-
-     function count(){
-     if (cc>18) {
-     return true;
-     } else {
-     return confirm(' точно меньше??!! ');
-     }
-     }
-     var cc = prompt('введи','');
-
-     if ( count() ) {
-     alert('проходи');
-     } else alert('доступ закрыт');
-
-
-
-                                             function count(cow, goat){
-                                                 if (cc>18) {
-                                                    return alert('ok');
-                                                 }
-
-                                                 return confirm(goat +' точно меньше??!! '+ cow);
-                                             }
-
-                                             var cc = prompt('введи',''),
-                                                 dd = 11,
-                                                 ss = 'маша';
-
-                                             count(ss, 'катя');
-                                             alert(cc);
-
-
-     function checkAge(age) {
-     if (age > 18) {
-     return true;
-     } else {
-     return confirm('Родители разрешили?');
-     }
-     }
-
-     function checkAge(age) {
-     return (age > 18) ?  true : confirm ('R U SURE?');
-     }
-
-     function checkAge(age) {
-     return (age > 18) || confirm ('R U SURE?');
-     }
-
-
-
-     function mini(a1,b1) {
-     if (a1 < b1) {
-     return alert('Переменная a1 ('+ a1 +'), меньше чем переменная b1 ('+ b1 +')');
-     } else if (b1 < a1) {
-     return alert('Переменная b1 ('+ b1 +'), меньше чем переменная a1 ('+ a1 +')');
-     } else;
-     }
-
-     var a1 = prompt('Enter a1','');
-     var b1 = prompt('Enter b1','');
-
-     mini(a1, b1);
-*/
-
-
-
-     document.write("В коде функции могут вызывать другие функции для выполнения подзадач. Частный случай подвызова — когда функция вызывает сама себя.<br> " +
-    "Это называется <b>рекурсией.</b><br>" +
-     "...<br><br><br>");
-
-                                                    /*
-                                                            function pow(x, n) {          // функция возведения в степень
-                                                                var result = x;
-                                                                for(var i=1; i<n; i++) {
-                                                                result *= x;
-                                                                }
-                                                                return result;
-                                                            }
-                                                     */
 
 
 
@@ -573,11 +361,8 @@ alert('2,3');
     '<span style="color:#696900"> ' +
     'alert ( "Привет, мир!".length ); // 12</span><br><br>' +
 
-/*
-    var str = "My\n";   // 3 символа. Третий - перевод строки
-    alert(str.length);  // 3
-*/
-
+//   var str = "My\n";   // 3 символа. 0 1 2 3
+//   alert(str.length);  // 3
 
 
     'Метод <b style="color:#257894;">.toUpperCase()</b>, который возвращает строку в верхнем регистре.  Без скобок метод вызван не будет.:<br> ' +
@@ -587,22 +372,8 @@ alert('2,3');
 
     'Метод <b style="color:#257894;">.toLowerCase()</b>, работает по аналогии с .toUpperCase только меняет регистр на строчные буквы.<br><br>' +
 
-/*
+    '<a href="html/functionUpperCase.html" target="_blank" style="color:dimgrey"> <b>функция меняющая первый символ строки на заглавный</b> </a><br><br>'+
 
- var str = prompt("Enter string","");
-
- alert(firstLetter(str));
-
- function firstLetter(str){                       // функция которая меняет первый символ строки на заглавный
- var strUp = str.charAt(0).toUpperCase();
- for (var i=1; i<str.length; i++){
- strUp += str.charAt(i);
- }
-
- return strUp;
- }
-
- */
 
 
     'Метод <b style="color:#257894;">.indexOf("text"[,n])</b>, используется для поиска подстроки где n индекс с которого начинается поиск, он необязательный<br>' +
@@ -611,10 +382,11 @@ alert('2,3');
     'alert( str.indexOf("Widget") ); // 0, т.к. "Widget" найден прямо в начале str  <br>'+
     'alert( str.indexOf("id") ); // 1, т.к. "id" найден, начиная с позиции 1        <br>'+
     'alert( str.indexOf("id", 2) ) // 12, поиск начат с позиции 2                   <br>'+
-    'alert( str.indexOf("Lalala") ); // -1, подстрока не найдена                    </span><br><br>' +
-
+    'alert( str.indexOf("Lalala") ); // -1, подстрока не найдена                    </span><br>' +
+    '<a href="html/functionIndexOf.html" target="_blank" style="color:dimgrey"> <b>функция Ищет в массиве ключ и возвращает его индекс</b> </a><br><br>'+
 
     'Метод <b style="color:#257894;">.lastIndexOf</b>, аналогичен .indexOf только ищет не с начала, а с конца строки.<br><br>' +
+
 
 
 
@@ -642,7 +414,11 @@ alert('2,3');
     'Отрицательные значения отсчитываются от конца строки:                                                   <br>' +
     '<span style="color:#696900"> ' +
     'alert( "testme".slice(-2) );  // "me", от 2 позиции с конца                                            <br>' +
-    'alert( "testme".slice(1, -1) ); // "estm", от 1 позиции до первой с конца.                             </span><br><br>' +
+    'alert( "testme".slice(1, -1) ); // "estm", от 1 позиции до первой с конца.                             </span><br>' +
+
+    '<a href="html/functionTruncate.html" target="_blank" style="color:dimgrey"> <b>функция Обрезает строку до определенной длинны</b> </a><br><br>'+
+
+
 
 
     'Метод <b style="color:#257894;">.charAt(n)</b>,позволяет получить символ из строки, где n позиция символа, первая позиция 0:<br>' +
@@ -650,46 +426,22 @@ alert('2,3');
     'var str = "jQuery";                <br>'+
     'alert( str.charAt(0) );  // "j"    </span><br>'+
     '<br>' +
-        /*
-         var str = "Я - современный браузер!";
-         alert(str[0]);  // "Я", IE8+
-         */
+
+    //  var str = "Я - современный браузер!";
+    //  alert(str[0]);  // "Я", IE8+
+
 
 
     'Метод <b style="color:#257894;">.toFixed(n).</b> округляет число num до n знаков после запятой, <br>' +
     'при необходимости добивает нулями до данной длины и возвращает в виде строки (удобно для форматированного вывода):<br>' +
     '<span style="color:#696900"> ' +
-    'var n = 12.345;                        <br>' +
+    'var n = 12.345;                          <br>' +
     'alert ( n.toFixed(2)  ); // "12.35"      <br>' +
-    'alert ( n.toFixed(0)  ); // "12""         <br>' +
+    'alert ( n.toFixed(0)  ); // "12""        <br>' +
     'alert ( n.toFixed(5)  ); // "12.34500"   </span><br>' +
     ' <br><br>');
 
-/*
 
-var str = prompt("Enter string","");
-
-    function to20 (str, maxlength) {     // функция с заменой макс символов на ...
-        var strL = str.length;
-        if (strL > maxlength) {
-           var newStr = str.slice(0, maxlength) + "...";
-        } else newStr = str;
-
-        return newStr;
-    }
-
-alert( to20(str, 20) );
-
-
-                                function truncate(str, maxlength) {    // функция с заменой макс символов на ... СОКРАЩЕННЫЙ ПРАВИЛЬНЫЙ ВАРИАНТ
-                                    if (str.length > maxlength) {
-                                       return str.slice(0, maxlength - 3) + '...';  // -3 нужно чтоб макс длинна не выходила за макс значение
-                                    }
-
-                                    return str;
-                                }
-
-*/
 
 
 
@@ -704,24 +456,559 @@ alert( to20(str, 20) );
 
 
 
+    document.write('<br> <a href="#menu">ВВЕРХ</a> <b style="color: red" id="objects">Объекты</b> как ассациотивные массивы<br>' +
+    'JavaScript можно обратиться к любому свойству объекта, даже если его нет. Ошибки не будет.<br> ' +
+    'Но если свойство не существует, то вернется специальное значение undefined:<br>' +
+    '<span style="color:#696900"> ' +
+    'var person = {};                                                           <br>' +
+    'alert(person.lalala); // undefined, нет свойства с ключом lalala           </span> <br>' +
+    'Таким образом мы можем легко проверить существование свойства — получив его и сравнив с undefined: <br>' +
+    '<span style="color:#696900"> ' +
+    'var person = { name: "Василий" };                                      <br>' +
+    'alert(person.lalala === undefined); // true, свойства нет              <br>' +
+    'alert(person.name === undefined); // false, свойство есть.             </span><br><br>' +
 
-    document.write('<br><br><b style="color: red" id="strict">Массивы</b><br>');
-var myArray = [4, "Kiev", 38, 'Lvov'],
+    'Также для проверки существования есть оператор in. Его синтаксис: "prop" in obj, причем имя свойства — в виде строки, например: <br>' +
+    '<span style="color:#696900"> ' +
+    'var person = { };                          <br>' +
+    'if ("age" in person) {                     <br>' +
+    '  alert("Свойство age существует!");       <br>' +
+    '}                                          </span><br><br>' +
+
+/*
+var alex = {};
+alex.sss = "anything";
+
+alert ("sss" in alex); // true
+alert ("ddd" in alex); // false
+
+         Мини-задача на синтаксис объектов. Напишите код, по строке на каждое действие.
+
+         var user = {};              Создайте пустой объект user.
+         user.name = "Vasya";        Добавьте свойство name со значением Вася.
+         user.surname = "Petrov";    Добавьте свойство surname со значением Петров.
+         user.name = "Sergey";       Поменяйте значение name на Сергей.
+         delete user.name;           Удалите свойство name из объекта.
+*/
+
+    'Создаем <b>объект</b> var alex = {}; и используем основные операции:<br>' +
+    '1. ПРИСВОЕНИЕ alex.sss = "anything";<br>' +
+    '2. ЧТЕНИЕ alert (alex.sss); // anything <br>' +
+    '3. УДАЛЕНИЕ delete alex.sss; <br><br>' +
+
+    'Альтернативный способ<br>' +
+    '1. ПРИСВОЕНИЕ alex["sss"] = "anything" // то же что и alex.sss <br>' +
+    '2. ЧТЕНИЕ alert (alex["sss"]); // anything <br>' +
+    '3. УДАЛЕНИЕ delete alex["sss"]; <br><br>' +
+
+    'Отличие в том что при использовании [ ] мы можем свойство передать через переменную<br>' +
+    '<span style="color:#696900"> ' +
+    'var person = { age: 25 };              <br>' +
+    'var key = "age";                       <br>' +
+    'alert(person[key]);  // выведет 25     </span><br><br>' +
+
+    'Запись свойств через точку имеет синтаксические ограничения такие же как и переменная нe может начинать на цифру иметь пробелы и т.д.<br>' +
+    'Поэтому запись вроде alex.first job не возможна и нужно использовать alex["first job"] <br>' +
+
+    'Следующие два фрагмента кода создают одинаковый объект: <br>' +
+    '<span style="color:#696900"> ' +
+    'var menuSetup = { <br>' +
+    'width:  300, <br>' +
+    '\'height\': 200, <br>' +
+    '"title": "Menu" <br>' +
+    '}; <br><br>' +
+
+    'var menuSetup = {}; <br>' +
+    'menuSetup.width = 300; <br>' +
+    'menuSetup.height = 200; <br>' +
+    'menuSetup.title = \'Menu\'; </span><br><br>' +
+    '' +
+'Значением свойства может быть объект: <br>' +
+    '<span style="color:#696900"> ' +
+    'var user = {                       <br>' +
+        'name:  "Таня",                 <br>' +
+        'age: 25,                       <br>' +
+        'size: {                        <br>' +
+            'top: 90,                   <br>' +
+            'middle: 60,                <br>' +
+            'bottom: 90                 <br>' +
+        '}                              <br>' +
+    '}                                  <br>' +
+
+    'alert( user.name ) // "Таня"       <br>' +
+    'alert( user.size.top ) // 90       </span><br>' +
+    'Здесь значением свойства size является объект {top: 90, middle: 60, bottom: 90 }. <br><br>' +
+    '' +
+'' +
+    'Для перебора всех свойств из объекта используется цикл по свойствам for..in. При этом в key будут последовательно записаны имена свойств. <br>' +
+    'Этот код будет вызван для каждого свойства объекта ..и выведет имя свойства и его значение  <br>' +
+    '<span style="color:#696900"> ' +
+    'var menu = {                                                                   <br>' +
+    '   width:  300,                                                                <br>' +
+    '   height: 200,                                                                <br>' +
+    '   title: "Menu"                                                               <br>' +
+    '};                                                                             <br>' +
+
+    'for (var key in menu) {                                                        <br>' +
+        'alert("Ключ: " + key + " значение:" + menu[key]);                              <br>' +
+    '}                                                                              </span><br><br><br>');
+
+/*
+Кросс-браузерный способ — это сделать цикл по свойствам и посчитать:
+    function getKeysCount(obj) {
+        var counter = 0;
+        for (var key in obj) {
+            counter++;
+        }
+    return counter;
+    }
+
+                            А вот так выглядит функция проверки на «пустоту»:
+                                function isEmpty(obj) {
+                                    for (var key in obj) {
+                                        return false; // если цикл хоть раз сработал, то объект не пустой => false
+                                    }
+                                // дошли до этой строки - значит цикл не нашёл ни одного свойства => true
+                                return true;
+                                }
+*/
+
+
+    document.write('<br> <a href="#menu">ВВЕРХ</a> <b style="color: red" id="arrays">Массивы</b><br><br>' +
+
+    '<a href="html/array1.html" target="_blank" style="color:dimgrey"> Пример <b>сохранения чисел </b>в массив </a><br>'+
+    '<a href="html/array2.html" target="_blank" style="color:dimgrey"> Пример <b>сохранения чисел </b>в массив </a><br>'+
+    '<a href="html/array3.html" target="_blank" style="color:dimgrey"> Пример <b>сохранения чисел и строк </b>в разные массивы </a><br>'+
+    '<a href="html/array4.html" target="_blank" style="color:dimgrey"> Пример <b>сохранения строк в виде числительных </b>в массив </a><br>'+
+    '<a href="html/array5.html" target="_blank" style="color:dimgrey"> Пример <b>сохранения строк в виде числительных </b>в массив </a><br><br>'+
+
+    'Синтаксис для создания нового массива. <b>Элементы нумеруются, начиная с 0 1 2 3</b>. Массив fruits с тремя элементами:<br>' +
+    '<span style="color:#696900"> ' +
+    'var fruits = ["Яблоко", "Апельсин", "Слива"];  <br>'+
+    'alert(fruits[0]); // Яблоко                    </span><br>' +
+
+    'Элементы можно всегда заменить или добавить <br>'+
+    '<span style="color:#696900"> ' +
+    'fruits[2] = "Груша"; // теперь ["Яблоко", "Апельсин", "Груша"] <br>'+
+    'fruits[3] = "Лимон"; // теперь ["Яблоко", "Апельсин", "Груша", "Лимон"] </span><br>' +
+
+    'Общее число элементов, хранимых в массиве, содержится в его свойстве length:<br>' +
+    '<span style="color:#696900"> ' +
+    'alert(fruits.length); // 4     </span><br>'+
+
+    'Через alert можно вывести и массив целиком. При этом его элементы будут перечислены через запятую:<br>' +
+    '<span style="color:#696900"> ' +
+    'var fruits = ["Яблоко", "Апельсин", "Груша"];      <br>' +
+    'alert(fruits); // Яблоко,Апельсин,Груша            </span><br>'+
+
+    'В массиве может храниться любое число элементов любого типа. В том числе, строки, числа, объекты и т.п.:<br>' +
+    '<span style="color:#696900"> ' +
+    'var arr = [ 1, "Имя", { name: "Петя" }, true ];        <br>' +
+    '// получить объект из массива и тут же -- его свойство <br>' +
+    'alert( arr[2].name ); // Петя                          </span><br><br>'+
+
+/*
+    Как получить последний элемент из произвольного массива?
+
+    var fruits = ["Яблоко", "Апельсин", "Груша", "Лимон"];
+    alert(fruits[fruits.length - 1]);
+
+
+                                 Как добавить элемент в конец произвольного массива?
+
+                                 var fruits = ["Яблоко", "Апельсин", "Груша", "Лимон"];
+                                 fruits[fruits.length] = "Киви";
+                                 alert(fruits[fruits.length - 1]);
+*/
+
+    'Для того, чтобы реализовывать эти структуры данных, и просто для более удобной работы с началом и концом массива существуют специальные методы.<br><br>' +
+
+    'Для конца массива<br>' +
+    '<b style="color:#257894;">.pop</b> <b>Удаляет</b> последний элемент из массива <b>и возвращает</b> его: <br>' +
+    '<span style="color:#696900"> ' +
+    'var fruits = ["Яблоко", "Апельсин", "Груша"];              <br>' +
+    'alert( fruits.pop() ); // Груша                            <br>' +
+    'alert(fruits); // Яблоко, Апельсин                         </span><br><br>' +
+
+
+    '<b style="color:#257894;">.push</b> <b>Добавляет</b> элемент в конец массива: (Является полным аналогом fruits[fruits.length] = ...) <br>' +
+    '<span style="color:#696900"> ' +
+    'var fruits = ["Яблоко", "Апельсин"];           <br>' +
+    'fruits.push("Груша");                          <br>' +
+    'alert(fruits); // Яблоко, Апельсин, Груша      </span><br><br>' +
+
+    'Для начала массива<br>' +
+    '<b style="color:#257894;">.shift</b> <b>Удаляет</b> из массива первый элемент <b>и возвращает</b> его: <br>' +
+    '<span style="color:#696900"> ' +
+    'var fruits = ["Яблоко", "Апельсин", "Груша"];              <br>' +
+    'alert( fruits.shift() ); // Яблоко                         <br>' +
+    'alert(fruits); // Апельсин, Груша                          </span><br><br>' +
+
+    '<b style="color:#257894;">.unshift</b> <b>Добавляет</b> элемент в начало массива: <br>' +
+    '<span style="color:#696900"> ' +
+    'var fruits = ["Апельсин", "Груша"];                        <br>' +
+    'fruits.unshift("Яблоко");                                  <br>' +
+    'alert(fruits); // Яблоко, Апельсин, Груша                  </span><br><br>' +
+
+    'Методы push и unshift могут добавлять сразу по несколько элементов:<br>' +
+    '<span style="color:#696900"> ' +
+    'var fruits = ["Яблоко"];                       <br>' +
+    'fruits.push("Апельсин", "Персик");             <br>' +
+    'fruits.unshift("Ананас", "Лимон");             <br>' +
+    'alert(fruits); // результат: ["Ананас", "Лимон", "Яблоко", "Апельсин", "Персик"] </span><br><br>' +
+
+
+    '<b>Для перебора элементов обычно используется цикл:</b>    <br>' +
+    '<span style="color:#696900"> ' +
+    'var arr = ["Яблоко", "Апельсин", "Груша"];                 <br>' +
+    'for (var i=0; i < arr.length; i++) {                       <br>' +
+    'alert( arr[i] );                                           <br>' +
+    '}  //по очереди выведутся Яблоко Апельсин Груша            </span><br><br>' +
+
+
+    '<b>При уменьшении length массив укорачивается</b>. Причем этот процесс необратимый, если потом вернуть length обратно — значения не восстановятся:<br>' +
+    '<span style="color:#696900"> ' +
+    'var arr = [1, 2, 3, 4, 5]; <br>' +
+    'arr.length = 2; // укоротить до 2 элементов <br>' +
+    'alert(arr); // [1, 2] <br>' +
+    'arr.length = 5; // вернуть length обратно, как было <br>' +
+    'alert(arr[3]); // undefined: значения не вернулись  </span><br>' +
+    'Самый простой способ очистить массив — это arr.length=0.<br><br>' +
+
+
+    'Существует еще один синтаксис для создания массива: Он редко используется, т.к. квадратные скобки [] короче. <br>' +
+    '<span style="color:#696900"> ' +
+    'var arr = new Array("Яблоко", "Груша", "и т.п.");</span><br>' +
+    'Но если у него один аргумент, и это число —то он создает массив без элементов, но с заданной длиной. <br>' +
+    'Получившийся массив ведёт себя так, как будто его элементы равны undefined. <br> <br> <br>' +
+
+    'Многомерные массивы <br>' +
+    'Массивы в JS могут содержать в качестве элементов другие массивы. Это можно использовать для создания многомерных массивов, например матриц: <br>' +
+    '<span style="color:#696900"> ' +
+    'var matrix = [                                 <br>' +
+    '[1, 2, 3],                                     <br>' +
+    '[4, 5, 6],                                     <br>' +
+    '[7, 8, 9]                                      <br>' +
+    '];                                             <br>' +
+    'alert(matrix[1][1]); // центральный элемент    </span><br><br><br><br><br>');
+
+
+
+
+
+
+document.write('<a href="#menu">ВВЕРХ</a><b style="color: red" id="strings"> Строки</b><br><br>' +
+
+'<a href="html/matchAndSum.html" target="_blank" style="color:dimgrey">Пример <b>по поиску и взятию чисел</b> из строки</a><br><br>'+
+
+'Методы <b style="color:#257894;">String()</b> и <b style="color:#257894;">toString()</b> конвертируют число, булево выражение или объект в строку :<br>' +
+'Если вы не уверены, что значение не является null или undefined, вы можете использовать String(), <br>' +
+'которая всегда возвращает строку, независимо от типа значения.<br>' +
+'<span style="color:#696900"> ' +
+'var myNumber = 24; // 24                       <br>'+
+'var myString = myNumber.toString(); // "24"    <br><br>' +
+
+'var myNumber = 24; // 24                       <br>'+
+'var myString = String(myNumber); // "24"       </span><br><br>'+
+
+
+'Метод <b style="color:#257894;">split()</b> разделяет строки в массив подстрок <br>'+
+'<span style="color:#696900"> ' +
+' var myString = "coming,apart,at,the,commas";                                              <br>'+
+' var substringArray = myString.split(","); // ["coming", "apart", "at", "the", "commas"]   <br>'+
+' var arrayLimited = myString.split(",", 3); // ["coming", "apart", "at"]                   </span><br>' +
+'Как видно в последней строке, второй параметр функции — это лимит количества элементов, которое будет в итоговом массиве.<br><br>' +
+
+
+'Метод <b style="color:#257894;">join(smth)</b> берет массив и склеивает его в строку, используя smth как разделитель. <br>'+
+'<span style="color:#696900"> ' +
+'var arr = ["Маша", "Петя", "Марина", "Василий"];<br>'+
+'var str = arr.join(";"); <br>'+
+'alert(str); // Маша;Петя;Марина;Василий </span> <br><br>' +
+
+
+'Метод <b style="color:#257894;">Object.keys(obj)</b> возвращает ключи объекта в виде массива. <br>'+
+'<span style="color:#696900"> ' +
+'var user = {<br>'+
+'name: "Петя",<br>'+
+'age: 30<br>'+
+'}<br>'+
+'var keys = Object.keys(user);<br>'+
+'alert(keys); // name, age</span> <br><br>' +
+
+
+'Метод <b style="color:#257894;">replace()</b> заменяет подстроку в строке на другую подстроку  <br>' +
+
+'<a href="html/replace.html" target="_blank" style="color:dimgrey">Пример <b>автоматической замены точек и запятых</b> из строки</a><br>'+
+'<a href="html/replace2.html" target="_blank" style="color:dimgrey">Пример <b>замены различных символов</b> из строки при помощи промпт</a><br><br>'+
+
+'<span style="color:#696900"> ' +
+'var slugger = "Josh Hamilton";                                                                 <br>'+
+'var betterSlugger = slugger.replace("h Hamilton", "e Bautista");                               <br>'+
+'console.log(betterSlugger); // "Jose Bautista"                                                 </span><br>' +
+
+'Первый аргумент — то, что вы хотите заменить и второй аргумент — новая строка. Функция заменяет только первое вхождение подстроки в строку.    <br>'+
+'Чтобы заменить все вхождения, нужно использовать регулярное выражение с глобальным флагом: g                                                     <br>' +
+'<span style="color:#696900"> ' +
+'var myString = "She sells automotive shells on the automotive shore";      <br>'+
+'var newString = myString.replace(/automotive/g, "sea");                    <br>'+
+'console.log(newString); // "She sells sea shells on the sea shore"         </span><br><br>' +
+
+
+'Метод <b style="color:#257894;">concat()</b> соединяет строки  <br>' +
+'<span style="color:#696900"> ' +
+'var stringOne = "Knibb ";                                                      <br>' +
+'var stringTwo = "High ";                                                       <br>' +
+'var stringThree = "football ";                                                 <br>' +
+'var stringFour = "rules.";                                                     <br>' +
+'var finalString = stringOne.concat(stringTwo, stringThree, stringFour);        <br>' +
+'console.log(finalString); // "Knibb high football rules."                       </span><br><br>' +
+
+'Соответствие по шаблону в строке может быть использовано с помощью 2-х методов, которые работают по-разному. <br>' +
+'В обоих методах возвращается лишь первое совпадение. Если совпадений не было   — возвращается null.   <br>' +
+'Метод <b style="color:#257894;">match()</b> применяется к строке и он принимает в качестве параметра регулярное выражение: <br>' +
+'<span style="color:#696900"> ' +
+'var myString = "How much wood could a wood chuck chuck";                           <br>' +
+'var myPattern = /.ood/;                                                            <br>' +
+'var myResult = <b>myString</b>.match(<b>myPattern</b>); // ["wood"]                <br>' +
+'var patternLocation = myResult.index; // 9                                         <br>' +
+'var originalString = myResult.input // "How much wood could a wood chuck chuck"    </span><br><br>' +
+
+'Метод <b style="color:#257894;">exec()</b> применяется к объекту регулярного выражения и принимает в качестве параметра строку: <br>' +
+'<span style="color:#696900"> ' +
+'var myString = "How much wood could a wood chuck chuck";                               <br>' +
+    'var myPattern = /.huck/;                                                           <br>' +
+    'var myResult = <b>myPattern</b>.exec(<b>myString</b>); // ["chuck"]                <br>' +
+    'var patternLocation = myResult.index; // 27                                        <br>' +
+    'var originalString = myResult.input // "How much wood could a wood chuck chuck"    </span><br><br>' +
+
+'Метод <b style="color:#257894;">search()</b> который принимает регулярное выражение и возвращает позицию первого совпадения по шаблону: <br>' +
+'Если совпадений не было — возращается "-1".                <br>' +
+'<span style="color:#696900"> ' +
+'var myString = "Assume";                                   <br>' +
+'var patternLocation = myString.search(/ume/); // 3         </span><br><br>' +
+
+
+'<br><br><br>');
+
+/*
+  var  text = "Morbi est metus, tristique nec 3 faucibus vel, sollicitudin a nunc. 44 Cras dictum 7 sem eget ligula lobortis 3";
+
+    var textSpl = text.split(" ");
+    var numbers = [];
+
+    for ( var i=0; i < textSpl.length; i++) {
+
+        if (!isNaN(textSpl[i]) ) numbers.push(textSpl[i]);
+    }
+
+    var sum = 0;                                            // цикл на суммирование всех цифровых значений массива
+    for ( var j=0; j < numbers.length; j++) {
+        sum += +numbers[j];
+    }
+
+    alert("Все числа в строке: " + numbers + "\nИх сумма: " + sum);
+
+
+
+
+    //   Проверить весь текст. Все слова, в которых букв больше чем 5 - сделать с заглавной буквы. Результат: вывести новый текст.
+
+    var  text = "Morbi est metu, tristique nec 3 faucibus vel, sollicitudin a nunc. 44 Cras dictum 7 sem eget ligula lobortis 3";
+
+    var textSpl = text.split(" ");
+    var result = [];
+
+    for ( var i=0; i < textSpl.length; i++) {
+
+        if (textSpl[i].length >= 5 ) {
+
+            var first = textSpl[i].charAt(0).toUpperCase();
+            var capital = first + textSpl[i].substr(1);
+            result.push(capital);
+        }
+        else if (textSpl[i].length < 5) result.push(textSpl[i]);
+    }
+
+    var text2 = '';
+    for ( i=0; i < result.length; i++) {  // var text2 = result.join(' ');
+        text2 += result[i]+' ';
+    }
+
+    alert(text2);
+
+
+
+
+
+   var text = "Morb est metull, tristique nec 3 faucibus vel, sollicitudin a nunc, 44 Cras dictum 7 sem eget ligula lobortis 3";
+
+
+                                   var wordSpl = text.split(" ");
+                                   var result = [];
+
+                                   for ( var i=0; i < wordSpl.length; i++) {
+
+                                       var letterSpl = wordSpl[i].split(",");
+                                       var letters = letterSpl.join('');
+
+                                       if (letters.length >= 5) {
+
+                                           var first = wordSpl[i].charAt(0).toUpperCase();
+                                           var capital = first + wordSpl[i].substr(1);
+                                           result.push(capital);
+                                       }
+
+                                       else result.push(wordSpl[i]);
+                                   }
+
+                                   var text2 = result.join(' ');
+                                   alert(text2);
+
+
+
+
+Создайте функцию find(arr, value), которая ищет в массиве arr значение value и возвращает его номер, если найдено, или -1, если не найдено.
+find(arr, "test"); // 0
+find(arr, 2); // 1
+find(arr, 1.5); // 2
+find(arr, 0); // -1
+
+
+arr = [ "test", 2, 1.5, false ];
+
+var prop = prompt("введите свойтво масива","");
+arr.push(prop);
+
+
+function find (array, value) {
+
+    for ( var i=0; i < array.length; i++) {
+        if (array[i] == value) {
+           return alert(i);
+        }
+    }
+}
+
+find (arr, prop);
+
+alert(arr);
+
+
+                                                var strings = ["кришна", "кришна", "харе", "харе", "8-()"];
+
+                                                function unique(arr) {
+                                                    return Object.keys(arr);
+                                                }
+
+                                                alert(unique(strings));
+
+
+                                              //  alert( unique(strings) ); // кришна, харе, 8-()
+
+
+
+
+
+
+
+В объекте есть свойство className, которое содержит список «классов» - слов, разделенных пробелом:
+var obj = { className: 'open menu' }
+
+Создайте функцию addClass(obj, cls), которая добавляет в список класс cls, но только если его там еще нет:
+addClass(obj, 'new'); // obj.className='open menu new'
+addClass(obj, 'open');  // без изменений (класс уже существует)
+addClass(obj, 'me'); // obj.className='open menu new me'
+
+alert(obj.className);  // "open menu new me"
+P.S. Ваша функция не должна добавлять лишних пробелов.
+
+     */
+var addProp = prompt("new","");
+var test = { className: 'open menu' };
+
+    function addClass(obj, cls) {
+
+        var classNameArr = obj.className.split(" "); // разбиваем свойство объекта в массив
+
+        for(var i=0; i<classNameArr.length; i++) {
+            if (classNameArr[i] == cls) return; // идет перебор всех индексов массива если свойство совпадает то выход из ФУНКЦИИ с помощью ретерн
+        }
+
+        classNameArr.push(cls);  // вносим в конец массива новое свойство
+
+        var result = classNameArr.join(" ");  // собираем массив в строку
+
+        obj.className = result;  // присваиваем изначальному свойству объекта полученную строку
+
+    }
+
+addClass(test, addProp);
+
+alert(test["className"]);
+
+
+
+
+
+
+
+
+/*
+
+    var door = prompt("new","");
+
+    var test = { className: 'open menu' };
+
+    function addClass(obj, cls) {
+
+        var classNameArr = obj.className.split(" ");
+
+        for(var i=0; i<classNameArr.length; i++) {
+            if (classNameArr[i] == cls) return; // класс уже есть
+        }
+
+        classNameArr.push(cls);
+
+        var result = classNameArr.join(" ");
+
+        return result;
+
+    }
+
+   test.className =  addClass(test, door);
+
+   alert(test["className"]);
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    var myArray = [4, "Kiev", 38, 'Lvov'],
     num = 3;                                        //создание массива из четырех индексов, отсчет идет с нуля 0 1 2 3, скобки квадратные
     document.write(myArray[num] + " city ");        //вывод массива где вместо индекса переменная num со значением 3
 
-var myArray2 = new Array (4, 'kiev', 38, 'lvov');   //альтернативное создание массива c используем зарезервированной команды new Array, скобки круглые
-    document.write(myArray2[1] + " city");
+var myArray2 = new Array (4, "kiev", 38, "lvov");   //альтернативное создание массива c используем зарезервированной команды new Array, скобки круглые
+    document.write(myArray2[1] + ' city <br><br>');
 
-    document.write('<br><br>');
 
 var myArrayL = myArray.length;
     document.write(myArray);
     document.write("<br>Длинна масива .length - " + myArrayL + ' индекса'); // .length свойство считывающие колличество индексов
     myArray.push ("odessa");                                                // добавление нового индекса в конец массива
-    myArray.unshift ("kharkov");                                            // добавление нового индекса в начало массива
-
-    document.write('<br><br>');
+    myArray.unshift ("kharkov <br><br>");                                            // добавление нового индекса в начало массива
 
     document.write(myArray);
     var myArrayL = myArray.length;
@@ -729,18 +1016,17 @@ var myArrayL = myArray.length;
     myArray.pop ();         // удаляем индекс из конец массива
     myArray.shift ();       // удаляем индекс из начала массива
 
-    document.write('<br><br>');
 
-    document.write(myArray);
+    document.write('<br><br>' + myArray);
     var myArrayL = myArray.length;
-    document.write("<br>Длинна масива .length - " + myArrayL + ' индекса. Удалили индексы методом <b style="color:red;">.pop .shift</b> из конец и начала массива');
-
-    document.write('<br><br>');
+    document.write("<br>Длинна масива .length - " + myArrayL + ' индекса. Удалили индексы методом <b style="color:red;">.pop .shift</b> из конец и начала массива<br><br>');
     document.write("Выводим последний индекс массива при помощи свойства <b style='color:purple;'>.length</b> -1 в качестве индекса " + myArray[myArrayL - 1]);   // массив[массив.length -1]
 
-    document.write('<br><br>');
 
-    document.write('Использование метода <b style="color:red;">.splice</b><br>');
+
+
+
+    document.write('<br><br>Использование метода <b style="color:red;">.splice</b><br>');
     myArray.splice(1,0, "Paris");  //сдвигает вправо индекс 1 (ничего не удаляет потому что 0) и вставляет новый индекс
     document.write(myArray + "<br>");
     document.write('');

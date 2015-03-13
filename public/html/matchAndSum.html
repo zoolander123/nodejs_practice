@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>js + jQuery</title>
+</head>
+<body>
+<script type="text/javascript">
+
+    text = "Morbi est metus, tristique nec 3 faucibus vel, sollicitudin a nunc. 44 Cras dictum sem eget ligula lobortis 3";
+
+    var numbers = text.match(/\d+/g);                       //матч ищет совпадения??
+
+    sum = function(m) {                                     // функция на суммирование всех цифровых значений массива
+        for(var s = 0, k = m.length; k; s += +m[--k]);
+        return s;
+    };
+
+    alert("Все числа в строке: " + numbers + "\nИх сумма: " + sum(numbers));
+
+
+/*
+    var sum = 0;                                            // цикл на суммирование всех цифровых значений массива
+    for(var i=0; i<numbers.length; i++) {
+        sum += +numbers[i];
+    }
+
+    alert("Все числа в строке: " + numbers + "\nИх сумма: " + sum);
+*/
+
+
+
+</script>
+
+<pre>
+text = "Morbi est metus, tristique nec 3 faucibus vel, sollicitudin a nunc. 44 Cras dictum sem eget ligula lobortis 3";
+
+var numbers = text.match(/\d+/g);                           //матч ищет совпадения??
+
+sum = function(m) {                                         // функция на суммирование всех цифровых значений массива
+for(var s = 0, k = m.length; k; s += +m[--k]);
+return s;
+};
+
+alert("Все числа в строке: " + numbers + "\nИх сумма: " + sum(numbers));
+
+
+/*
+    var sum = 0;                                            // цикл на суммирование всех цифровых значений массива
+    for(var i=0; i < numbers.length; i++) {
+    sum += +numbers[i];
+    }
+*/
+</pre>
+
+</body>
+</html>

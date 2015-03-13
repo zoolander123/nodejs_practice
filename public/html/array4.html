@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>array push number 4</title>
+</head>
+<body>
+<script type="text/javascript">
+
+
+    var numbers = [];
+    var sum = 0;
+
+    do {
+        var inp = prompt("Enter the numeral:", "");
+
+        if (inp == null) break;
+
+        else if ( !(isNaN(inp)) ) {
+            numbers.push(parseInt(inp))
+        }
+
+        else if ( inp == "One" || inp == "one" ){
+            inp = 1;
+            numbers.push(inp)
+        }
+
+        else if ( inp == "Two" || inp == "two" ){
+            inp = 2;
+            numbers.push(inp)
+        }
+
+        else if ( inp == "Three" || inp == "three" ){
+            inp = 3;
+            numbers.push(inp)
+        }
+
+        else if ( inp == "Four" || inp == "four" ){
+            inp = 4;
+            numbers.push(inp)
+        }
+
+        else if ( inp == "Five" || inp == "five" ){
+            inp = 5;
+            numbers.push(inp)
+        }
+
+        else if ( inp == "Six" || inp == "six" ){
+            inp = 6;
+            numbers.push(inp)
+        }
+
+        else if ( inp == "Seven" || inp == "seven" ){
+            inp = 7;
+            numbers.push(inp)
+        }
+
+        else if ( inp == "Eight" || inp == "eight" ){
+            inp = 8;
+            numbers.push(inp)
+        }
+
+        else if ( inp == "Nine" || inp == "nine" ){
+            inp = 9;
+            numbers.push(inp)
+        }
+
+        else if ( inp == "Ten" || inp == "ten" ){
+            inp = 10;
+            numbers.push(inp)
+        }
+
+    } while(1)
+
+    for(var i=0; i<numbers.length; i++)
+    { sum += numbers[i];  }
+    alert (sum);
+
+
+</script>
+
+<pre>
+
+Ввести в массив числительные. Остальные значения игнорируются. И вывести сумму массива.
+
+    var numbers = [];
+    var sum = 0;
+
+    do {
+    var inp = prompt("Enter the numeral:", "");  //  var inp = parseInt( prompt("Enter the number:", "") );
+                                                 //  var inp = prompt("Enter the number:", "");
+
+        if (inp == null) break;
+
+        else if ( !(isNaN(inp)) ) {
+            numbers.push(parseInt(inp))
+        }
+
+        else if ( inp == "One" || inp == "one" ){
+            inp = 1;
+            numbers.push(inp)
+        }
+
+        else if ( inp == "Two" || inp == "two" ){
+            inp = 2;
+            numbers.push(inp)
+        }
+
+        else if ( inp == "Three" || inp == "three" ){
+            inp = 3;
+            numbers.push(inp)
+        }
+
+        else if ( inp == "Four" || inp == "four" ){
+            inp = 4;
+            numbers.push(inp)
+        }
+
+        else if ( inp == "Five" || inp == "five" ){
+            inp = 5;
+            numbers.push(inp)
+        }
+
+        else if ( inp == "Six" || inp == "six" ){
+            inp = 6;
+            numbers.push(inp)
+        }
+
+        else if ( inp == "Seven" || inp == "seven" ){
+            inp = 7;
+            numbers.push(inp)
+        }
+
+        else if ( inp == "Eight" || inp == "eight" ){
+            inp = 8;
+            numbers.push(inp)
+        }
+
+        else if ( inp == "Nine" || inp == "nine" ){
+            inp = 9;
+            numbers.push(inp)
+        }
+
+        else if ( inp == "Ten" || inp == "ten" ){
+            inp = 10;
+            numbers.push(inp)
+        }
+
+    } while(1)
+
+    //alert(+numbers[0] + +numbers[1] + +numbers[2] + +numbers[3]);
+
+    for (var i=0; i < numbers.length; i++) {
+        sum += numbers[i];
+    }
+    alert (sum);
+
+    //sum += inp;  alert(+numbers[0] + +numbers[1] + +numbers[2] + +numbers[3]);
+
+
+</pre>
+
+</body>
+</html>
