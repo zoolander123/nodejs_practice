@@ -18,6 +18,7 @@
     <li><a href="#objects">"Объекты";</a></li>
     <li><a href="#arrays">"Массивы";</a></li>
     <li><a href="#strings">"Строки";</a></li>
+    <li><a href="#time">"Дата и Время";</a></li>
 </ul>
 
 <script type="text/javascript">
@@ -250,6 +251,8 @@ document.write('<a href="#menu">ВВЕРХ</a> Циклы <b style="color: red" 
 
 
     document.write ('<a href="#menu">ВВЕРХ</a> Конструкция <b style="color: red" id="switch">SWITCH</b><br>' +
+    '<a href="html/switch1.html" target="_blank" style="color:dimgrey">Пример <b>switch</b> как if else</a><br>'+
+    '<a href="html/switch2.html" target="_blank" style="color:dimgrey">Пример <b>switch</b> как if else</a><br><br>'+
     'Конструкция switch сравнить выражение сразу с несколькими вариантами:<br><br>' +
 
     '<span style="color:#696900"> ' +
@@ -299,14 +302,30 @@ document.write('<a href="#menu">ВВЕРХ</a> Циклы <b style="color: red" 
     '}</span><br>' +
     'При case 3 выполнение идёт со строки (*) и идёт вниз до ближайшего break, таким образом проходя и то, что предназначено для case 5.<br><br>'+
 
-    '<a href="html/switch1.html" target="_blank" style="color:dimgrey">Пример <b>switch</b> как if else</a><br>'+
-    '<a href="html/switch2.html" target="_blank" style="color:dimgrey">Пример <b>switch</b> как if else</a><br>'+
     '<br><br><br>');
 
 
 
 
+
+
+
+
     document.write('<a href="#menu">ВВЕРХ</a><b style="color: red" id="functions"> Функции</b><br>' +
+
+    '<a href="html/function1.html" target="_blank" style="color:dimgrey">Пример <b>function</b> </a><br>'+
+    '<a href="html/function2.html" target="_blank" style="color:dimgrey">Пример <b>function</b> </a><br>'+
+    '<a href="html/function3.html" target="_blank" style="color:dimgrey">Пример <b>function</b> </a><br>'+
+    '<a href="html/function4.html" target="_blank" style="color:dimgrey">Пример <b>function</b> </a><br>'+
+    '<a href="html/function5.html" target="_blank" style="color:dimgrey">Пример <b>function</b> </a><br><br>'+
+
+    '<a href="html/functionPower.html" target="_blank" style="color:dimgrey">Функция возведения в степерь </a><br>'+
+    '<a href="html/getRandom.html" target="_blank" style="color:dimgrey">Функция Cлучайное число от 0(включительно) до 1 </a><br>'+
+    '<a href="html/getRandomArbitary.html" target="_blank" style="color:dimgrey">Функция Случайное число между min и max </a><br>'+
+    '<a href="html/getRandomInt.html" target="_blank" style="color:dimgrey">Функция Случайное ЦЕЛОЕ число между min и max </a><br><br>'+
+    '<a href="html/compareRandom.html" target="_blank" style="color:dimgrey">Функция Меняет в случайном порядке элементы массива </a><br>'+
+    '<a href="html/sameAsIndexOf.html" target="_blank" style="color:dimgrey">Функция по определению индекса в массиве АНАЛОГ IndexOf </a><br><br>'+
+
     'Функция может содержать локальные переменные, объявленные через var. Такие переменные видны только внутри функции. <br>' +
     'Блоки if/else, switch, for, while, do..while не влияют на область видимости переменных. ' +
     'При объявлении переменной в таких блоках, она всё равно будет видна во всей функции. <br> Функция может обратиться ко внешней переменной. ' +
@@ -336,17 +355,10 @@ document.write('<a href="#menu">ВВЕРХ</a> Циклы <b style="color: red" 
     '// ...                                 <br>' +
     '}                                      </span><br><br>'+
 
-    '<a href="html/function1.html" target="_blank" style="color:dimgrey">Пример <b>function</b> </a><br>'+
-    '<a href="html/function2.html" target="_blank" style="color:dimgrey">Пример <b>function</b> </a><br>'+
-    '<a href="html/function3.html" target="_blank" style="color:dimgrey">Пример <b>function</b> </a><br>'+
-    '<a href="html/function4.html" target="_blank" style="color:dimgrey">Пример <b>function</b> </a><br>'+
-    '<a href="html/function5.html" target="_blank" style="color:dimgrey">Пример <b>function</b> </a><br><br>'+
-
-    '<a href="html/functionPower.html" target="_blank" style="color:dimgrey">Функция возведения в степерь </a><br><br>'+
-
-
     'В коде функции могут вызывать другие функции для выполнения подзадач. Частный случай подвызова — когда функция вызывает сама себя.<br> ' +
     'Это называется <b>рекурсией.</b><br>' +
+    '<a href="html/recursion.html" target="_blank" style="color:dimgrey"> Пример рекурсии </a><br>'+
+
     '...<br><br><br>');
 
 
@@ -366,13 +378,14 @@ document.write('<a href="#menu">ВВЕРХ</a> Циклы <b style="color: red" 
 
 
     'Метод <b style="color:#257894;">.toUpperCase()</b>, который возвращает строку в верхнем регистре.  Без скобок метод вызван не будет.:<br> ' +
+    '<a href="html/functionUpperCase.html" target="_blank" style="color:dimgrey"> <b>функция меняющая первый символ строки на заглавный</b> </a><br>'+
     '<span style="color:#696900"> ' +
     'var hello = "Привет, мир!";                        <br>' +
     'alert ( hello.toUpperCase()  ); // "ПРИВЕТ, МИР!"    </span><br><br>' +
 
     'Метод <b style="color:#257894;">.toLowerCase()</b>, работает по аналогии с .toUpperCase только меняет регистр на строчные буквы.<br><br>' +
 
-    '<a href="html/functionUpperCase.html" target="_blank" style="color:dimgrey"> <b>функция меняющая первый символ строки на заглавный</b> </a><br><br>'+
+
 
 
 
@@ -456,7 +469,11 @@ document.write('<a href="#menu">ВВЕРХ</a> Циклы <b style="color: red" 
 
 
 
-    document.write('<br> <a href="#menu">ВВЕРХ</a> <b style="color: red" id="objects">Объекты</b> как ассациотивные массивы<br>' +
+    document.write('<br> <a href="#menu">ВВЕРХ</a> <b style="color: red" id="objects">Объекты</b> как ассоциативные массивы<br>' +
+    '<a href="html/changeValueInObject.html" target="_blank" style="color:dimgrey">Пример <b>изменения свойства добавление символов</b> в объект</a><br>'+
+    '<a href="html/deleteValueInObject.html" target="_blank" style="color:dimgrey">Пример <b>удаление части свойства</b> в объекте</a><br>'+
+    '<a href="html/makeKeysInObject.html" target="_blank" style="color:dimgrey">Пример <b>вставки в объект ключей и свойств</b> перебором массива</a><br><br>'+
+
     'JavaScript можно обратиться к любому свойству объекта, даже если его нет. Ошибки не будет.<br> ' +
     'Но если свойство не существует, то вернется специальное значение undefined:<br>' +
     '<span style="color:#696900"> ' +
@@ -538,10 +555,10 @@ alert ("ddd" in alex); // false
     'alert( user.name ) // "Таня"       <br>' +
     'alert( user.size.top ) // 90       </span><br>' +
     'Здесь значением свойства size является объект {top: 90, middle: 60, bottom: 90 }. <br><br>' +
-    '' +
-'' +
-    'Для перебора всех свойств из объекта используется цикл по свойствам for..in. При этом в key будут последовательно записаны имена свойств. <br>' +
-    'Этот код будет вызван для каждого свойства объекта ..и выведет имя свойства и его значение  <br>' +
+
+
+    '<b>Для перебора всех свойств из объекта</b> используется цикл по свойствам <b>for (var key in OBJ)</b>. ' +
+    'При этом в key будут последовательно записаны имена свойств. Этот код будет вызван для каждого свойства объекта и выведет имя свойства и его значение  <br>' +
     '<span style="color:#696900"> ' +
     'var menu = {                                                                   <br>' +
     '   width:  300,                                                                <br>' +
@@ -580,7 +597,8 @@ alert ("ddd" in alex); // false
     '<a href="html/array2.html" target="_blank" style="color:dimgrey"> Пример <b>сохранения чисел </b>в массив </a><br>'+
     '<a href="html/array3.html" target="_blank" style="color:dimgrey"> Пример <b>сохранения чисел и строк </b>в разные массивы </a><br>'+
     '<a href="html/array4.html" target="_blank" style="color:dimgrey"> Пример <b>сохранения строк в виде числительных </b>в массив </a><br>'+
-    '<a href="html/array5.html" target="_blank" style="color:dimgrey"> Пример <b>сохранения строк в виде числительных </b>в массив </a><br><br>'+
+    '<a href="html/array5.html" target="_blank" style="color:dimgrey"> Пример <b>сохранения строк в виде числительных </b>в массив </a><br>'+
+    '<a href="html/array6.html" target="_blank" style="color:dimgrey"> Пример <b>удаление ключей из массива</b>при прохождении проверки </a><br><br>'+
 
     'Синтаксис для создания нового массива. <b>Элементы нумеруются, начиная с 0 1 2 3</b>. Массив fruits с тремя элементами:<br>' +
     '<span style="color:#696900"> ' +
@@ -657,6 +675,95 @@ alert ("ddd" in alex); // false
     'fruits.unshift("Ананас", "Лимон");             <br>' +
     'alert(fruits); // результат: ["Ананас", "Лимон", "Яблоко", "Апельсин", "Персик"] </span><br><br>' +
 
+    '<b style="color:#257894;">.delete</b> <b>Удаляет</b> ключ но не так, как нам этого хочется. Образовалась «дырка».: <br>' +
+    '<span style="color:#696900"> ' +
+    'var arr = ["Я", "иду", "домой"];                   <br>' +
+    'delete arr[1]; // значение с индексом 1 удалено    <br>' +
+    '// теперь arr = ["Я", undefined, "домой"];         <br>' +
+    'alert(arr[1]); // undefined                        </span><br><br>' +
+
+    '<b style="color:#257894;">.splice</b> <b>Умеет все:</b> удалять элементы, вставлять элементы, заменять элементы - по очереди и одновременно. <br><br>' +
+    '<b>arr.splice(index[, deleteCount, elem1, ..., elemN])</b><br><br>' +
+    'Удалить deleteCount элементов, начиная с номера index, а затем вставить elem1, ..., elemN на их место.<br>' +
+    '<span style="color:#696900"> ' +
+    'var arr = ["Я", "изучаю", "JavaScript"];                       <br>' +
+    'arr.splice(1, 1);  // начиная с позиции 1, удалить 1 элемент   <br>' +
+    'alert(arr); //  осталось ["Я", "JavaScript"]                   <br><br>' +
+
+    'var arr = ["Я", "сейчас", "изучаю", "JavaScript"];             <br>' +
+    '// удалить 3 первых элемента и добавить другие вместо них      <br>' +
+    'arr.splice(0, 3, "Мы", "изучаем")                              <br>' +
+    'alert( arr ) // теперь ["Мы", "изучаем", "JavaScript"]         </span><br><br>' +
+
+    'Метод <b>splice возвращает массив</b> из удаленных элементов:<br>' +
+
+    '<span style="color:#696900"> ' +
+    'var arr = ["Я", "сейчас", "изучаю", "JavaScript"];     <br>' +
+    '// удалить 2 первых элемента <br>' +
+    'var removed = arr.splice(0, 2); <br>' +
+    'alert( removed ); // "Я", "сейчас" <-- array of removed elements </span><br><br>' +
+
+    'Метод splice также может вставлять элементы без удаления, для этого достаточно установить deleteCount в 0:<br>' +
+    '<span style="color:#696900"> ' +
+    'var arr = ["Я", "изучаю", "JavaScript"];                       <br>' +
+    '// с позиции 2, удалить 0, вставить "сложный", "язык"          <br>' +
+    'arr.splice(2, 0, "сложный", "язык");                           <br>' +
+    'alert(arr); // "Я", "изучаю", "сложный", "язык", "JavaScript"  </span><br><br>' +
+
+    'Допускается использование отрицательного номера позиции, которая в этом случае отсчитывается с конца:<br>' +
+    '<span style="color:#696900"> ' +
+    'var arr = [1, 2, 5] <br>' +
+    '// начиная с позиции индексом -1 (предпоследний элемент) <br>' +
+    '// удалить 0 элементов, <br>' +
+    '// затем вставить числа 3 и 4 <br>' +
+    'arr.splice(-1, 0, 3, 4); <br>' +
+    'alert(arr); // результат: 1,2,3,4,5</span><br><br><br>' +
+
+
+    '<b style="color:#257894;">.slice</b> <b>Копирует </b> участок массива от begin до end, не включая end. Исходный массив при этом не меняется. <br>' +
+    '<span style="color:#696900"> ' +
+    'var arr = ["Почему", "надо", "учить", "JavaScript"];               <br>' +
+    'var arr2 = arr.slice(1,3); // элементы 1, 2 (не включая 3)         <br>' +
+    'alert(arr2); // надо, учить                                        </span><br>' +
+    'Если не указать end — копирование будет до конца массива:         <br>' +
+    '<span style="color:#696900"> ' +
+    'var arr = ["Почему", "надо", "учить", "JavaScript"];               <br>' +
+    'alert( arr.slice(1) ); // надо,учить,JavaScript   </span><br>' +
+    'Можно использовать отрицательные индексы, они отсчитываются с конца. Если вообще не указать аргументов — скопируется весь массив.<br><br><br>' +
+
+
+    '<b style="color:#257894;">.sort()</b> Сортирует  массив, <b>преобразуя элементы к строке</b>.  <br>' +
+    '<a href="html/sort.html" target="_blank" style="color:dimgrey"> Пример <b>сортировки массива как строк</b> с копированием slice</a><br>'+
+    '<a href="html/sort2.html" target="_blank" style="color:dimgrey"> Пример <b>сортировки ключей объектов как чисел</b> в массиве </a><br><br>'+
+    '<span style="color:#696900"> ' +
+    'var arr = [ 1, 2, 15 ];            <br>' +
+    'arr.sort();                        <br>' +
+    'alert( arr );  // 1, 15, 2         </span><br><br>' +
+
+    'Функция позволит отсортировать элементы массива как числа по возрастающей: <br>' +
+    '<span style="color:#696900"> ' +
+    '<b>function compareNumeric(a, b) {return a - b;}   </b><br>' +
+    'var arr = [ 2, 1, 15 ];                            <br>' +
+    'arr.sort(compareNumeric);                          <br>' +
+    'alert(arr);  // 1, 2, 15                           </span><br><br>' +
+
+    'Функция позволит отсортировать элементы массива как числа по убывающей: <br>' +
+    '<span style="color:#696900"> ' +
+    '<b>function compareReversed(a, b) {return b - a;}   </b><br>' +
+    'var arr = [ 2, 1, 15 ];                             <br>' +
+    'arr.sort(compareReversed);                          <br>' +
+    'alert(arr);  // 15, 2, 1                            </span><br><br><br>' +
+
+
+    '<b style="color:#257894;">.reverse()</b> <b>Меняет порядок элементов в массиве на обратный.</b>.  <br>' +
+    '<span style="color:#696900"> ' +
+    'var arr = [1,2,3];             <br>' +
+    'arr.reverse();                 <br>' +
+    'alert(arr); // 3,2,1           </span><br>' +
+
+    '<br><br><br><br>' +
+
+
 
     '<b>Для перебора элементов обычно используется цикл:</b>    <br>' +
     '<span style="color:#696900"> ' +
@@ -696,10 +803,12 @@ alert ("ddd" in alex); // false
 
 
 
-
-document.write('<a href="#menu">ВВЕРХ</a><b style="color: red" id="strings"> Строки</b><br><br>' +
-
-'<a href="html/matchAndSum.html" target="_blank" style="color:dimgrey">Пример <b>по поиску и взятию чисел</b> из строки</a><br><br>'+
+    document.write('<a href="#menu">ВВЕРХ</a><b style="color: red" id="strings"> Строки</b><br><br>' +
+'<a href="html/matchAndSum.html" target="_blank" style="color:dimgrey">Пример <b>по поиску и взятию чисел</b> из строки</a><br>'+
+'<a href="html/takeNumbersFromString.html" target="_blank" style="color:dimgrey">Пример <b>по поиску и взятию чисел</b> из строки</a><br>'+
+'<a href="html/take5LettersFromString.html" target="_blank" style="color:dimgrey">Пример <b>по поиску слов из 5 букв</b> из строки</a><br>'+
+'<a href="html/splitJoin1.html" target="_blank" style="color:dimgrey">Пример <b>изменения "-" на заглавную букву</b> в строке МОЙ ВАРИАНТ</a><br>'+
+'<a href="html/splitJoin2.html" target="_blank" style="color:dimgrey">Пример <b>изменения "-" на заглавную букву</b> в строке ПРИВИЛЬНЫЙ ВАРИАНТ</a><br><br>'+
 
 'Методы <b style="color:#257894;">String()</b> и <b style="color:#257894;">toString()</b> конвертируют число, булево выражение или объект в строку :<br>' +
 'Если вы не уверены, что значение не является null или undefined, вы можете использовать String(), <br>' +
@@ -707,7 +816,6 @@ document.write('<a href="#menu">ВВЕРХ</a><b style="color: red" id="strings"
 '<span style="color:#696900"> ' +
 'var myNumber = 24; // 24                       <br>'+
 'var myString = myNumber.toString(); // "24"    <br><br>' +
-
 'var myNumber = 24; // 24                       <br>'+
 'var myString = String(myNumber); // "24"       </span><br><br>'+
 
@@ -728,6 +836,7 @@ document.write('<a href="#menu">ВВЕРХ</a><b style="color: red" id="strings"
 
 
 'Метод <b style="color:#257894;">Object.keys(obj)</b> возвращает ключи объекта в виде массива. <br>'+
+'<a href="html/objectKeys.html" target="_blank" style="color:dimgrey">Пример <b>Object.keys</b> из массива НЕ РАБОТАЕТ КАК НУЖНО</a><br>'+
 '<span style="color:#696900"> ' +
 'var user = {<br>'+
 'name: "Петя",<br>'+
@@ -738,7 +847,6 @@ document.write('<a href="#menu">ВВЕРХ</a><b style="color: red" id="strings"
 
 
 'Метод <b style="color:#257894;">replace()</b> заменяет подстроку в строке на другую подстроку  <br>' +
-
 '<a href="html/replace.html" target="_blank" style="color:dimgrey">Пример <b>автоматической замены точек и запятых</b> из строки</a><br>'+
 '<a href="html/replace2.html" target="_blank" style="color:dimgrey">Пример <b>замены различных символов</b> из строки при помощи промпт</a><br><br>'+
 
@@ -746,7 +854,6 @@ document.write('<a href="#menu">ВВЕРХ</a><b style="color: red" id="strings"
 'var slugger = "Josh Hamilton";                                                                 <br>'+
 'var betterSlugger = slugger.replace("h Hamilton", "e Bautista");                               <br>'+
 'console.log(betterSlugger); // "Jose Bautista"                                                 </span><br>' +
-
 'Первый аргумент — то, что вы хотите заменить и второй аргумент — новая строка. Функция заменяет только первое вхождение подстроки в строку.    <br>'+
 'Чтобы заменить все вхождения, нужно использовать регулярное выражение с глобальным флагом: g                                                     <br>' +
 '<span style="color:#696900"> ' +
@@ -755,24 +862,38 @@ document.write('<a href="#menu">ВВЕРХ</a><b style="color: red" id="strings"
 'console.log(newString); // "She sells sea shells on the sea shore"         </span><br><br>' +
 
 
-'Метод <b style="color:#257894;">concat()</b> соединяет строки  <br>' +
+'Метод <b style="color:#257894;">.concat()</b> соединяет строки или элементы массива. ' +
+'Cоздаёт новый массив, в который копируются элементы из arr, а также value1, value2, ... valueN.  <br>' +
 '<span style="color:#696900"> ' +
 'var stringOne = "Knibb ";                                                      <br>' +
 'var stringTwo = "High ";                                                       <br>' +
 'var stringThree = "football ";                                                 <br>' +
 'var stringFour = "rules.";                                                     <br>' +
 'var finalString = stringOne.concat(stringTwo, stringThree, stringFour);        <br>' +
-'console.log(finalString); // "Knibb high football rules."                       </span><br><br>' +
+'console.log(finalString); // "Knibb high football rules."                      <br><br>' +
+
+'var arr = [1,2];               <br>' +
+'var newArr = arr.concat(3,4);  <br>' +
+'alert(newArr); // 1,2,3,4      </span><br><br>' +
+
+'<b>Если value — массив, то concat добавляет его элементы.</b><br>' +
+'<span style="color:#696900"> ' +
+'var arr = [1,2];                                                           <br>' +
+'var newArr = arr.concat( [3,4], 5);// то же самое, что arr.concat(3,4,5)   <br>' +
+'alert(newArr); // 1,2,3,4,5                                                </span><br><br><br>' +
+
+
 
 'Соответствие по шаблону в строке может быть использовано с помощью 2-х методов, которые работают по-разному. <br>' +
 'В обоих методах возвращается лишь первое совпадение. Если совпадений не было   — возвращается null.   <br>' +
-'Метод <b style="color:#257894;">match()</b> применяется к строке и он принимает в качестве параметра регулярное выражение: <br>' +
+'Метод <b style="color:#257894;">.match()</b> применяется к строке и он принимает в качестве параметра регулярное выражение: <br>' +
 '<span style="color:#696900"> ' +
 'var myString = "How much wood could a wood chuck chuck";                           <br>' +
 'var myPattern = /.ood/;                                                            <br>' +
 'var myResult = <b>myString</b>.match(<b>myPattern</b>); // ["wood"]                <br>' +
 'var patternLocation = myResult.index; // 9                                         <br>' +
 'var originalString = myResult.input // "How much wood could a wood chuck chuck"    </span><br><br>' +
+
 
 'Метод <b style="color:#257894;">exec()</b> применяется к объекту регулярного выражения и принимает в качестве параметра строку: <br>' +
 '<span style="color:#696900"> ' +
@@ -782,273 +903,23 @@ document.write('<a href="#menu">ВВЕРХ</a><b style="color: red" id="strings"
     'var patternLocation = myResult.index; // 27                                        <br>' +
     'var originalString = myResult.input // "How much wood could a wood chuck chuck"    </span><br><br>' +
 
+
 'Метод <b style="color:#257894;">search()</b> который принимает регулярное выражение и возвращает позицию первого совпадения по шаблону: <br>' +
 'Если совпадений не было — возращается "-1".                <br>' +
 '<span style="color:#696900"> ' +
 'var myString = "Assume";                                   <br>' +
 'var patternLocation = myString.search(/ume/); // 3         </span><br><br>' +
 
-
 '<br><br><br>');
 
-/*
-  var  text = "Morbi est metus, tristique nec 3 faucibus vel, sollicitudin a nunc. 44 Cras dictum 7 sem eget ligula lobortis 3";
 
-    var textSpl = text.split(" ");
-    var numbers = [];
 
-    for ( var i=0; i < textSpl.length; i++) {
 
-        if (!isNaN(textSpl[i]) ) numbers.push(textSpl[i]);
-    }
+    document.write('<a href="#menu">ВВЕРХ</a><b style="color: red" id="time"> Дата и Время</b><br><br>' +
+    '' +
 
-    var sum = 0;                                            // цикл на суммирование всех цифровых значений массива
-    for ( var j=0; j < numbers.length; j++) {
-        sum += +numbers[j];
-    }
 
-    alert("Все числа в строке: " + numbers + "\nИх сумма: " + sum);
-
-
-
-
-    //   Проверить весь текст. Все слова, в которых букв больше чем 5 - сделать с заглавной буквы. Результат: вывести новый текст.
-
-    var  text = "Morbi est metu, tristique nec 3 faucibus vel, sollicitudin a nunc. 44 Cras dictum 7 sem eget ligula lobortis 3";
-
-    var textSpl = text.split(" ");
-    var result = [];
-
-    for ( var i=0; i < textSpl.length; i++) {
-
-        if (textSpl[i].length >= 5 ) {
-
-            var first = textSpl[i].charAt(0).toUpperCase();
-            var capital = first + textSpl[i].substr(1);
-            result.push(capital);
-        }
-        else if (textSpl[i].length < 5) result.push(textSpl[i]);
-    }
-
-    var text2 = '';
-    for ( i=0; i < result.length; i++) {  // var text2 = result.join(' ');
-        text2 += result[i]+' ';
-    }
-
-    alert(text2);
-
-
-
-
-
-   var text = "Morb est metull, tristique nec 3 faucibus vel, sollicitudin a nunc, 44 Cras dictum 7 sem eget ligula lobortis 3";
-
-
-                                   var wordSpl = text.split(" ");
-                                   var result = [];
-
-                                   for ( var i=0; i < wordSpl.length; i++) {
-
-                                       var letterSpl = wordSpl[i].split(",");
-                                       var letters = letterSpl.join('');
-
-                                       if (letters.length >= 5) {
-
-                                           var first = wordSpl[i].charAt(0).toUpperCase();
-                                           var capital = first + wordSpl[i].substr(1);
-                                           result.push(capital);
-                                       }
-
-                                       else result.push(wordSpl[i]);
-                                   }
-
-                                   var text2 = result.join(' ');
-                                   alert(text2);
-
-
-
-
-Создайте функцию find(arr, value), которая ищет в массиве arr значение value и возвращает его номер, если найдено, или -1, если не найдено.
-find(arr, "test"); // 0
-find(arr, 2); // 1
-find(arr, 1.5); // 2
-find(arr, 0); // -1
-
-
-arr = [ "test", 2, 1.5, false ];
-
-var prop = prompt("введите свойтво масива","");
-arr.push(prop);
-
-
-function find (array, value) {
-
-    for ( var i=0; i < array.length; i++) {
-        if (array[i] == value) {
-           return alert(i);
-        }
-    }
-}
-
-find (arr, prop);
-
-alert(arr);
-
-
-                                                var strings = ["кришна", "кришна", "харе", "харе", "8-()"];
-
-                                                function unique(arr) {
-                                                    return Object.keys(arr);
-                                                }
-
-                                                alert(unique(strings));
-
-
-                                              //  alert( unique(strings) ); // кришна, харе, 8-()
-
-
-
-
-
-
-
-В объекте есть свойство className, которое содержит список «классов» - слов, разделенных пробелом:
-var obj = { className: 'open menu' }
-
-Создайте функцию addClass(obj, cls), которая добавляет в список класс cls, но только если его там еще нет:
-addClass(obj, 'new'); // obj.className='open menu new'
-addClass(obj, 'open');  // без изменений (класс уже существует)
-addClass(obj, 'me'); // obj.className='open menu new me'
-
-alert(obj.className);  // "open menu new me"
-P.S. Ваша функция не должна добавлять лишних пробелов.
-
-     */
-var addProp = prompt("new","");
-var test = { className: 'open menu' };
-
-    function addClass(obj, cls) {
-
-        var classNameArr = obj.className.split(" "); // разбиваем свойство объекта в массив
-
-        for(var i=0; i<classNameArr.length; i++) {
-            if (classNameArr[i] == cls) return; // идет перебор всех индексов массива если свойство совпадает то выход из ФУНКЦИИ с помощью ретерн
-        }
-
-        classNameArr.push(cls);  // вносим в конец массива новое свойство
-
-        var result = classNameArr.join(" ");  // собираем массив в строку
-
-        obj.className = result;  // присваиваем изначальному свойству объекта полученную строку
-
-    }
-
-addClass(test, addProp);
-
-alert(test["className"]);
-
-
-
-
-
-
-
-
-/*
-
-    var door = prompt("new","");
-
-    var test = { className: 'open menu' };
-
-    function addClass(obj, cls) {
-
-        var classNameArr = obj.className.split(" ");
-
-        for(var i=0; i<classNameArr.length; i++) {
-            if (classNameArr[i] == cls) return; // класс уже есть
-        }
-
-        classNameArr.push(cls);
-
-        var result = classNameArr.join(" ");
-
-        return result;
-
-    }
-
-   test.className =  addClass(test, door);
-
-   alert(test["className"]);
-
-
-*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    var myArray = [4, "Kiev", 38, 'Lvov'],
-    num = 3;                                        //создание массива из четырех индексов, отсчет идет с нуля 0 1 2 3, скобки квадратные
-    document.write(myArray[num] + " city ");        //вывод массива где вместо индекса переменная num со значением 3
-
-var myArray2 = new Array (4, "kiev", 38, "lvov");   //альтернативное создание массива c используем зарезервированной команды new Array, скобки круглые
-    document.write(myArray2[1] + ' city <br><br>');
-
-
-var myArrayL = myArray.length;
-    document.write(myArray);
-    document.write("<br>Длинна масива .length - " + myArrayL + ' индекса'); // .length свойство считывающие колличество индексов
-    myArray.push ("odessa");                                                // добавление нового индекса в конец массива
-    myArray.unshift ("kharkov <br><br>");                                            // добавление нового индекса в начало массива
-
-    document.write(myArray);
-    var myArrayL = myArray.length;
-    document.write("<br>Длинна масива .length - " + myArrayL + ' индекса. Добавили методом <b style="color:red;">.push .unshift </b> в конец и начало массива');
-    myArray.pop ();         // удаляем индекс из конец массива
-    myArray.shift ();       // удаляем индекс из начала массива
-
-
-    document.write('<br><br>' + myArray);
-    var myArrayL = myArray.length;
-    document.write("<br>Длинна масива .length - " + myArrayL + ' индекса. Удалили индексы методом <b style="color:red;">.pop .shift</b> из конец и начала массива<br><br>');
-    document.write("Выводим последний индекс массива при помощи свойства <b style='color:purple;'>.length</b> -1 в качестве индекса " + myArray[myArrayL - 1]);   // массив[массив.length -1]
-
-
-
-
-
-    document.write('<br><br>Использование метода <b style="color:red;">.splice</b><br>');
-    myArray.splice(1,0, "Paris");  //сдвигает вправо индекс 1 (ничего не удаляет потому что 0) и вставляет новый индекс
-    document.write(myArray + "<br>");
-    document.write('');
-    myArray.splice(3,1);  //сдвигает вправо индекс 3 и удаляет один индекс. полулучается что удаляет самого себя - индекс номер 3
-    document.write(myArray + "<br>");
-    myArray.splice(0,1, "London", "Berlin");  // сдвигает вправо индекс 0 и удаляет один индекс. и в тоже место вставляет 2 новых индекса
-    document.write(myArray + "<br>");
-
-    numArray = [50, 60, 70, 80, 90];
-    document.write("<br>" + myArray[0] + " " + numArray[0] + ", млн. человек.<br>" +
-                            myArray[1] + " " + numArray[1] + ", млн. человек.<br>" +
-                            myArray[2] + " " + numArray[2] + ", млн. человек.<br><br>");
-
-   frutsArr = ['orange','banana','pear'];
-   document.write(frutsArr + "<br>");
-
-   var testArr = frutsArr.splice(1,2, 'apple','pineapple'); //Метод splice изменяет arrayObj, удаляя указанное количество элементов, начиная с позиции start,
-                                                            // и вставляя новые элементы. Удаленные элементы возвращаются как новый объект Array.
-   document.write(frutsArr + "<br>");
-
-   document.write(testArr +'<br>');
-
+    '<br><br><br>');
 
 
 </script>

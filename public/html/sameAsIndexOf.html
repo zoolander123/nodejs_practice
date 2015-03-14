@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>same as indexOf</title>
+</head>
+<body>
+<script type="text/javascript">
+
+
+    arr = [ "test", 2, 1.5, false ];
+
+    var prop = prompt("введите свойтво масива","");
+    arr.push(prop);
+
+
+    function find (array, value) {
+
+        for ( var i=0; i < array.length; i++) {
+            if (array[i] == value) {
+                return alert(i);
+            }
+        }
+    }
+
+    find (arr, prop);
+
+    alert(arr);
+
+
+
+</script>
+
+<pre>
+
+
+
+Создайте функцию find(arr, value), которая ищет в массиве arr значение value и возвращает его номер, если найдено, или -1, если не найдено.
+find(arr, "test"); // 0
+find(arr, 2); // 1
+find(arr, 1.5); // 2
+find(arr, 0); // -1
+
+
+                                    arr = [ "test", 2, 1.5, false ];
+
+                                    var prop = prompt("введите свойтво масива","");
+                                    arr.push(prop);
+
+
+                                    function find (array, value) {
+
+                                        for ( var i=0; i < array.length; i++) {
+                                            if (array[i] == value) {
+                                               return alert(i);
+                                            }
+                                        }
+                                    }
+
+                                    find (arr, prop);
+
+                                    alert(arr);
+
+
+
+</pre>
+
+</body>
+</html>

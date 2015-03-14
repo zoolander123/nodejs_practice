@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>split to 5 letters</title>
+</head>
+<body>
+<script type="text/javascript">
+
+
+
+    var text = "Morb est metull, tristique nec 3 faucibus vel, sollicitudin a nunc, 44 Cras dictum 7 sem eget ligula lobortis 3";
+
+
+    var wordSpl = text.split(" ");
+    var result = [];
+
+    for ( var i=0; i < wordSpl.length; i++) {
+
+        var letterSpl = wordSpl[i].split(",");
+        var letters = letterSpl.join('');
+
+        if (letters.length >= 5) {
+
+            var first = wordSpl[i].charAt(0).toUpperCase();
+            var capital = first + wordSpl[i].substr(1);
+            result.push(capital);
+        }
+
+        else result.push(wordSpl[i]);
+    }
+
+    var text2 = result.join(' ');
+    alert(text2);
+
+
+
+</script>
+
+<pre>
+
+
+Проверить весь текст. Все слова, в которых букв больше чем 5 - сделать с заглавной буквы. Результат: вывести новый текст.
+
+var text = "Morb est metull, tristique nec 3 faucibus vel, sollicitudin a nunc, 44 Cras dictum 7 sem eget ligula lobortis 3";
+
+
+                                   var wordSpl = text.split(" ");
+                                   var result = [];
+
+                                   for ( var i=0; i < wordSpl.length; i++) {
+
+                                       var letterSpl = wordSpl[i].split(",");
+                                       var letters = letterSpl.join('');
+
+                                       if (letters.length >= 5) {
+
+                                           var first = wordSpl[i].charAt(0).toUpperCase();
+                                           var capital = first + wordSpl[i].substr(1);
+                                           result.push(capital);
+                                       }
+
+                                       else result.push(wordSpl[i]);
+                                   }
+
+                                   var text2 = result.join(' ');
+                                   alert(text2);
+
+
+
+</pre>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>split</title>
+</head>
+<body>
+<script type="text/javascript">
+
+
+    var  text = "Morbi est metus, tristique nec 3 faucibus vel, sollicitudin a nunc. 44 Cras dictum 7 sem eget ligula lobortis 3";
+
+    var textSpl = text.split(" ");                          // раскладываем стринг на массив елементов разделенных пробелом
+    var numbers = [];
+
+    for ( var i=0; i < textSpl.length; i++) {
+
+        if (!isNaN(textSpl[i]) ) numbers.push(textSpl[i]);  // для каждого индекса массива идет проверка на число и если да то пуш в цифровой массив
+    }
+
+    var sum = 0;                                            // цикл на суммирование всех цифровых значений цифрового массива
+    for ( var j=0; j < numbers.length; j++) {
+        sum += +numbers[j];
+    }
+
+    alert("Все числа в строке: " + numbers + "\nИх сумма: " + sum);
+
+
+
+
+</script>
+
+<pre>
+
+    var  text = "Morbi est metus, tristique nec 3 faucibus vel, sollicitudin a nunc. 44 Cras dictum 7 sem eget ligula lobortis 3";
+
+    var textSpl = text.split(" ");                          // раскладываем стринг на массив елементов разделенных пробелом
+    var numbers = [];
+
+    for ( var i=0; i < textSpl.length; i++) {
+        if (!isNaN(textSpl[i]) ) numbers.push(textSpl[i]);  // для каждого индекса массива идет проверка на число и если да то пуш в цифровой  массив
+    }
+
+    var sum = 0;                                            // цикл на суммирование всех цифровых значений цифрового массива
+    for ( var j=0; j < numbers.length; j++) {
+        sum += +numbers[j];
+    }
+
+    alert("Все числа в строке: " + numbers + "\nИх сумма: " + sum);
+
+
+
+</pre>
+
+</body>
+</html>

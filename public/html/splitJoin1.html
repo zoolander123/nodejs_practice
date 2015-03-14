@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>split & join 1</title>
+</head>
+<body>
+<script type="text/javascript">
+
+
+    var text = "my-short-string";
+
+    var result = [];
+
+
+    function camelize (str) {
+
+        var arrStr = str.split("-");
+
+        result.push(arrStr[0]);
+
+        for (var i = 1; i < arrStr.length; i++) {
+
+            var first = arrStr[i].charAt(0).toUpperCase();
+            var capital = first + arrStr[i].substr(1);
+            result.push(capital);
+
+        }
+
+        return result.join("");
+
+    }
+
+    alert( camelize(text) );
+
+
+</script>
+
+<pre>
+
+    Напишите функцию camelize(str), которая преобразует строки вида «my-short-string» в «myShortString».
+    P.S. Вам пригодятся методы строк charAt, split и toUpperCase.
+
+
+var text = "my-short-string";
+
+var result = [];
+
+
+    function camelize (str) {
+
+        var arrStr = str.split("-");
+
+        result.push(arrStr[0]);
+
+        for (var i = 1; i < arrStr.length; i++) {
+
+            var first = arrStr[i].charAt(0).toUpperCase();
+            var capital = first + arrStr[i].substr(1);
+            result.push(capital);
+
+        }
+
+        return result.join("");
+
+    }
+
+    alert( camelize(text) );
+
+
+</pre>
+
+</body>
+</html>

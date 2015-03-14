@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>recursion</title>
+</head>
+<body>
+<script type="text/javascript">
+
+
+    var list = { value: 1, next: { value: 2, next: null }   };
+    function printReverseList(list) {
+        if (list.next) {
+            printReverseList(list.next);
+        }
+        alert(list.value);
+    }
+
+    printReverseList(list);
+
+
+</script>
+
+<pre>
+
+    var list = { value: 1, next: { value: 2, next: null }   };
+
+    function printReverseList(list) {
+       if (list.next) {
+            printReverseList(list.next);
+       }
+      alert(list.value);
+    }
+
+    printReverseList(list);
+
+</pre>
+
+</body>
+</html>

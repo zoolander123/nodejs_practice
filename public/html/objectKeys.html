@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Object.keys</title>
+</head>
+<body>
+<script type="text/javascript">
+
+
+    var strings = ["кришна", "кришна", "харе", "харе", "8-()"];
+
+    function unique(arr) {
+        return Object.keys(arr);
+    }
+
+    alert(unique(strings));
+
+
+</script>
+
+<pre>
+
+МУТЬ НЕ РАБОТАЕТ
+
+    var strings = ["кришна", "кришна", "харе", "харе", "8-()"];
+
+    function unique(arr) {
+        return Object.keys(arr);
+    }
+
+    alert(unique(strings));
+
+
+    //  alert( unique(strings) ); // кришна, харе, 8-()
+
+
+</pre>
+
+</body>
+</html>

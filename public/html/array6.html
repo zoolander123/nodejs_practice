@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>array splice</title>
+</head>
+<body>
+<script type="text/javascript">
+
+
+    arr = [2, 5, 8, 6, 3, 1];
+
+    function filterRangeInPlace (arr, a, b) {
+
+        for ( var i=0; i < arr.length; i++) {
+
+            if ( !(a <= arr[i] && arr[i] <= b) ) {
+                arr.splice(i--,1);
+
+            }
+
+        }
+
+    }
+    filterRangeInPlace (arr, 3, 7);
+    alert(arr);
+
+
+
+</script>
+
+<pre>
+
+    Создайте функцию filterRangeInPlace(arr, a, b), которая получает массив с числами arr и удаляет из него все числа ВНЕ диапазона a..b.
+            То есть, проверка имеет вид a ≤ arr[i] ≤ b. Функция должна менять сам массив и ничего не возвращать.
+
+    arr = [2, 5, 8, 6, 3, 1];
+
+    filterRangeInPlace(arr, 3, 7); // удалены числа вне диапазона 3..7
+    alert(arr); // массив изменился: остались [5, 6, 3]
+
+
+
+
+                            arr = [2, 5, 8, 6, 3, 1];
+
+                            function filterRangeInPlace (arr, a, b) {
+
+                                for ( var i=0; i < arr.length; i++) {
+
+                                    if ( !(a <= arr[i] && arr[i] <= b) ) {
+                                        arr.splice(i--, 1);
+                                    }
+
+                                }
+
+                            }
+                            filterRangeInPlace (arr, 3, 7);
+                            alert(arr);
+
+
+
+</pre>
+
+</body>
+</html>

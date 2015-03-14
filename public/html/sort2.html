@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>sort 2</title>
+</head>
+<body>
+<script type="text/javascript">
+
+
+
+    function compareAge(perA, perB) {
+        return perA.age - perB.age;
+    }
+
+    var vasya = { name: "Вася", age: 23 };
+    var masha = { name: "Маша", age: 18 };
+    var vovochka = { name: "Вовочка", age: 6 };
+
+    var people = [ vasya , masha , vovochka ];
+
+    people.sort(compareAge);
+
+    for(var i=0; i<people.length; i++) {
+        alert(people[i].name);
+    }
+
+
+
+</script>
+
+<pre>
+
+
+Напишите код, который отсортирует массив объектов people по полю age.
+
+    function compareAge(perA, perB) {
+        return perA.age - perB.age;
+    }
+
+    var vasya = { name: "Вася", age: 23 };
+    var masha = { name: "Маша", age: 18 };
+    var vovochka = { name: "Вовочка", age: 6 };
+
+    var people = [ vasya , masha , vovochka ];
+
+    people.sort(compareAge);
+
+    for(var i=0; i < people.length; i++) {
+       alert(people[i].name);
+    }
+
+
+
+
+
+
+</pre>
+
+</body>
+</html>

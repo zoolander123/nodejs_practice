@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>split & join 1</title>
+</head>
+<body>
+<script type="text/javascript">
+
+    var text = "my-short-string";
+
+    function camelize(str) {
+
+        var arr = str.split('-');
+
+        for(var i=1; i < arr.length; i++) {
+
+           arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
+
+        }
+
+        return arr.join('');
+
+    }
+
+    alert ( camelize(text) );
+
+
+</script>
+
+<pre>
+
+                Напишите функцию camelize(str), которая преобразует строки вида «my-short-string» в «myShortString».
+                P.S. Вам пригодятся методы строк charAt, split и toUpperCase.
+
+
+
+var text = "my-short-string";
+
+function camelize(str) {
+
+    var arr = str.split('-');
+
+    for(var i=1; i < arr.length; i++) {
+
+       arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);   // ПРАВИЛЬНАЯ КОРОТКАЯ ЗАПИСЬ К ЗАГЛАВНОЙ БУКВЕ
+                                                                    // НУЛЕВОЙ ИНДЕКС И ТАК СИДИТ В МАССИВЕ arr ЕГО МЕНЯТЬ НЕ НУЖНО
+    }                                                               // МЫ РАБОТАЕМ С ПЕРВЫМ ИНДЕКСОМ И ЭТОЙ СТРОКОЙ МЫ ЕГО МЕНЯЕМ - ЗАПИСЫВАЕМ ПОВЕРХУ
+
+    return arr.join('');
+
+}
+
+alert (camelize(text));
+
+
+</pre>
+
+</body>
+</html>

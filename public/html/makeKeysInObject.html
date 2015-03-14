@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>recursion</title>
+</head>
+<body>
+<script type="text/javascript">
+
+
+
+    var arr = ["воз", "лето", "киборг", "корсет", "ЗОВ", "тело", "гробик", "костер", "сектор"],
+            obj = {},
+            result = [];
+
+    function sortedWords(arr) {
+
+        for (var i=0; i < arr.length; i++) {
+
+            var anagram = arr[i].toLowerCase().split("").sort().join("");
+
+            obj[anagram] = arr[i];
+
+        }
+
+        for (var key in obj) {
+
+            result.push(obj[key]);
+
+        }
+
+    }
+
+    sortedWords(arr);
+    alert(result);
+
+
+
+
+
+</script>
+
+<pre>
+
+
+    var arr = ["воз", "лето", "киборг", "корсет", "ЗОВ", "тело", "гробик", "костер", "сектор"],
+        obj = {},
+        result = [];
+
+    function sortedWords(arr) {
+
+        for (var i=0; i < arr.length; i++) {
+
+            var anagram = arr[i].toLowerCase().split("").sort().join("");   // разделяем сортируем складываем и сохраняем как стринг в ВАР анаграмма
+
+            obj[anagram] = arr[i];                                          // используем анаграмму в качестве ключа в объекте
+                                                                            // и присваиваем этому ключу текущий элемент перебора массива
+        }
+
+        for (var key in obj) {                                              // перебираем все ключи и свойства в объекте
+                                                                            // и каждое свойство пушим в результат
+            result.push(obj[key]);
+
+        }
+
+    }
+
+    sortedWords(arr);
+    alert(result);
+
+
+
+
+
+</pre>
+
+</body>
+</html>
